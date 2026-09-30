@@ -1,0 +1,2 @@
+PASS: gerçek SDK yerel katalogdan model kimliği, görev ve CPU sağlayıcısını okudu.
+Model ağırlığı indirilmedi veya yüklenmedi; GPU inference test edilmedi.

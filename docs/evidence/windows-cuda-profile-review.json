@@ -1,0 +1,92 @@
+{
+  "reviewer": "Codex timing and source comparison",
+  "source_file": "windows-cuda-profile.json",
+  "source_sha256": "6021a2cbd4a10313211a947ab3c096fdb6d5a42068b98a821549dacac4f34736",
+  "run_identity": "292bcab02b22584cebc2bc812e0af5247362fbfb0d4e98a3a1477e6355ef1770",
+  "code_matches_delivered_v8": true,
+  "same_index_as_previous_offline_run": true,
+  "first_question_total_seconds": 27.7836,
+  "first_model_load_seconds": 4.35971,
+  "first_response_open_seconds": 23.160767,
+  "warm_question_mean_seconds": 2.9609,
+  "warm_question_range_seconds": [
+    1.7173,
+    3.5465
+  ],
+  "warm_model_load_seconds": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "catalog_lookup_range_seconds": [
+    0.000149,
+    0.000158
+  ],
+  "answers_unchanged_from_previous_offline_run": 5,
+  "quality_scope": "first five only: 4 appropriate, break/continue needs precision; no print/return or out-of-scope cases in this run",
+  "previous_intermittent_delay_reproduced": false,
+  "previous_intermittent_delay_root_cause": "unknown",
+  "limitations": [
+    "response_open contains SDK processing, potentially first-run setup and waits; not isolated GPU compute time.",
+    "No performance fix or production code change was made during this review.",
+    "Five cases do not establish sustained performance or full answer quality."
+  ],
+  "cases": [
+    {
+      "case": 1,
+      "question": "input() hangi veri türünü döndürür?",
+      "total_seconds": 27.7836,
+      "retrieval_seconds": 0.2612,
+      "load_seconds": 4.35971,
+      "catalog_lookup_seconds": 0.000153,
+      "response_open_seconds": 23.160767,
+      "session_open_seconds": 0.000213,
+      "session_close_seconds": 0.000213
+    },
+    {
+      "case": 2,
+      "question": "Atama ve eşitlik operatörlerinin farkı nedir?",
+      "total_seconds": 3.5465,
+      "retrieval_seconds": 0.0249,
+      "load_seconds": 0.0,
+      "catalog_lookup_seconds": 0.000158,
+      "response_open_seconds": 3.520917,
+      "session_open_seconds": 6.2e-05,
+      "session_close_seconds": 0.000196
+    },
+    {
+      "case": 3,
+      "question": "range(5) hangi sayıları üretir?",
+      "total_seconds": 3.0932,
+      "retrieval_seconds": 0.3227,
+      "load_seconds": 0.0,
+      "catalog_lookup_seconds": 0.000149,
+      "response_open_seconds": 2.769752,
+      "session_open_seconds": 5.6e-05,
+      "session_close_seconds": 0.000199
+    },
+    {
+      "case": 4,
+      "question": "break ile continue farkı nedir?",
+      "total_seconds": 3.4866,
+      "retrieval_seconds": 0.3144,
+      "load_seconds": 0.0,
+      "catalog_lookup_seconds": 0.000156,
+      "response_open_seconds": 3.171468,
+      "session_open_seconds": 5.9e-05,
+      "session_close_seconds": 0.000197
+    },
+    {
+      "case": 5,
+      "question": "Fonksiyonun dışında return yazarsam ne olur?",
+      "total_seconds": 1.7173,
+      "retrieval_seconds": 0.0676,
+      "load_seconds": 0.0,
+      "catalog_lookup_seconds": 0.000156,
+      "response_open_seconds": 1.648912,
+      "session_open_seconds": 5.8e-05,
+      "session_close_seconds": 0.000192
+    }
+  ]
+}

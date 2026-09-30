@@ -1,0 +1,17 @@
+{
+  "reviewer": "Codex",
+  "method": "Ham model cevaplarını sağlanan notlar ve beklenen cevaplarla karşılaştırma; insan onayı değildir.",
+  "run": "evaluation-current-top1.json",
+  "answerable_passed": 1,
+  "answerable_total": 9,
+  "out_of_scope_passed": 5,
+  "out_of_scope_total": 5,
+  "passed_case_numbers": [
+    3,
+    10,
+    11,
+    12,
+    13,
+    14
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "completed_cases": 14,
+  "total_cases": 14,
+  "statuses": {
+    "invalid_citations": 1,
+    "answered": 6,
+    "model_abstained": 4,
+    "no_context": 3
+  },
+  "retrieval_hits": 8,
+  "answerable_cases_evaluated": 9,
+  "out_of_scope_cases_evaluated": 5,
+  "out_of_scope_abstentions": 5,
+  "mean_seconds": 12.513,
+  "quality_note": "answered yalnızca kaynak etiketi kontrolünden geçmiştir; doğruluk onayı değildir."
+}

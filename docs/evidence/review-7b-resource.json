@@ -1,0 +1,8 @@
+{
+  "model": "qwen2.5-7b",
+  "completed_questions": 0,
+  "outcome": "stopped_under_environment_memory_pressure",
+  "cgroup_memory_max_bytes": 15032385536,
+  "observed_cgroup_memory_current_bytes": 15032303616,
+  "note": "Memory is the entire environment including other processes and page cache. Not the model RSS or a Windows minimum RAM specification. No correctness or latency result was obtained."
+}

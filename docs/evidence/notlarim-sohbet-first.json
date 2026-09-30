@@ -1,0 +1,98 @@
+[
+  {
+    "question": "print ne işe yarar",
+    "status": "answered",
+    "answer": "Örnek: 1 <= gun <= 31, gün değerinin 1 ile 31 arasında olduğunu kontrol eder. [S1]\nBu kontrol tek başına takvim tarihinin geçerli olduğunu göstermez; ayın gerçek gün sayısı ayrıca kontrol edilmelidir. [S1]\nprint yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez. [S2]",
+    "answer_mode": "extractive",
+    "evidence": [
+      {
+        "id": "S1.13",
+        "source_id": 1,
+        "text": "Örnek: 1 <= gun <= 31, gün değerinin 1 ile 31 arasında olduğunu kontrol eder."
+      },
+      {
+        "id": "S1.14",
+        "source_id": 1,
+        "text": "Bu kontrol tek başına takvim tarihinin geçerli olduğunu göstermez; ayın gerçek gün sayısı ayrıca kontrol edilmelidir."
+      },
+      {
+        "id": "S2.7",
+        "source_id": 2,
+        "text": "print yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez."
+      }
+    ],
+    "evidence_validation": "exact_source",
+    "model_output": "{\"selections\": [\"S1.13\", \"S1.14\", \"S2.7\"]}",
+    "generation_details": {
+      "model_lookup_and_load_seconds": 9.234512,
+      "model_details": {
+        "catalog_lookup_seconds": 0.000155,
+        "cached_state_seconds": 4e-06,
+        "loaded_state_seconds": 5e-06,
+        "model_load_seconds": 9.234016,
+        "model_log_seconds": 0.000307
+      },
+      "session_open_seconds": 0.011018,
+      "request_open_seconds": 3.7e-05,
+      "request_setup_seconds": 0.000548,
+      "response_open_seconds": 22.441781,
+      "response_read_seconds": 9.9e-05,
+      "response_close_seconds": 6e-06,
+      "request_close_seconds": 7e-06,
+      "session_close_seconds": 0.000365,
+      "total_seconds": 31.68845
+    },
+    "citations": [
+      1,
+      2
+    ],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "02-kosullar.txt",
+          "page": 1,
+          "position": 0,
+          "content": "Python: Koşullar ve karşılaştırmalar if bir koşul doğruysa ilgili kod bloğunu çalıştırır. elif başka bir koşulu sınar. else önceki koşulların hiçbiri doğru değilse çalışır. Python blokları girintiyle tanımlar. PEP 8 stilinde bir girinti seviyesi dört boşluk kullanır. Aynı bloktaki satırlar aynı girintide olmalıdır. = atama yapar; == iki değerin eşitliğini karşılaştırır. != eşit değil anlamına gelir. Diğer karşılaştırmalar <, >, <= ve >= operatörleridir. and iki koşulun birlikte doğru olmasını; or en az birinin doğru olmasını sınamak için kullanılır. not mantıksal değeri tersine çevirir. Koşullarda boş liste, boş metin, 0 ve None yanlış kabul edilir. Örnek: 1 <= gun <= 31, gün değerinin 1 ile 31 arasında olduğunu kontrol eder. Bu kontrol tek başına takvim tarihinin geçerli olduğunu göstermez; ayın gerçek gün sayısı ayrıca kontrol edilmelidir."
+        },
+        "score": 0.3723867798527698,
+        "lexical_score": 0.0,
+        "fusion_score": 0.01639344262295082,
+        "matched_terms": []
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "04-fonksiyonlar.txt",
+          "page": 1,
+          "position": 0,
+          "content": "Python: Fonksiyonlar, return ve kapsam Fonksiyon def anahtar sözcüğüyle tanımlanır. Parametreler tanımda, argümanlar çağrıda yer alır. Örnek: def topla(a, b): return a + b. topla(2, 3) çağrısının sonucu 5 olur. return fonksiyonu sonlandırır ve çağıran koda bir değer verir. Açık bir return yoksa fonksiyon None döndürür. print yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez. print fonksiyonunun dönüş değeri None'dır. return fonksiyon gövdesi dışında kullanılırsa SyntaxError oluşur. Fonksiyonun tanımı, fonksiyonu çağıran satır gerçekten çalıştırılmadan önce yürütülmüş olmalıdır. Bir fonksiyon başka bir fonksiyona tanımında atıf yapabilir; çağrı gerçekleştiğinde gereken isim tanımlı olmalıdır. Fonksiyon içinde atanan değişkenler, aksi belirtilmedikçe yereldir. Fonksiyon dışından doğrudan kullanılamazlar. Sonuçları fonksiyon dışında kullanmak için return ile döndürmek tercih edilir. if __name__ == \"__main__\": bloğu dosya doğrudan çalıştırıldığında yürütülür; import edildiğinde yürütülmez."
+        },
+        "score": 0.36265594352479313,
+        "lexical_score": 1.4013007891457891,
+        "fusion_score": 0.016129032258064516,
+        "matched_terms": [
+          "print"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "01-degiskenler.txt",
+          "page": 1,
+          "position": 0,
+          "content": "Python: Değişkenler ve temel veri türleri Bu belge proje için hazırlanmış başlangıç düzeyinde örnek ders notudur. Değişken, bir nesneye verilen isimdir. atama işlemi = ile yapılır: yas = 20. Python'da int tam sayıları, float ondalıklı sayıları, str metinleri, bool ise True ve False değerlerini temsil eder. Bir nesnenin türü type(nesne) ile görülebilir. Örneğin type(42), int türünü verir. Değişken adları rakamla başlayamaz ve Python anahtar sözcükleri değişken adı olarak kullanılamaz. Python büyük ve küçük harfe duyarlıdır: isim ve Isim farklı değişkenlerdir. input() kullanıcıdan aldığı değeri str olarak döndürür. Sayısal işlem yapmak için dönüşüm gerekir. Örnek: yas = int(input(\"Yaş: \")). Kullanıcı \"abc\" yazarsa int dönüşümü ValueError oluşturur. print() ekrana yazar. f-string ile değerler metne eklenebilir: print(f\"Yaş: {yas}\"). Ondalık gösterim için f\"{3.14159:.2f}\" ifadesi \"3.14\" üretir."
+        },
+        "score": 0.3614156742235558,
+        "lexical_score": 1.411657590452492,
+        "fusion_score": 0.015873015873015872,
+        "matched_terms": [
+          "print"
+        ]
+      }
+    ],
+    "retrieval_seconds": 0.3272,
+    "generation_seconds": 31.6903,
+    "total_seconds": 32.0175
+  }
+]

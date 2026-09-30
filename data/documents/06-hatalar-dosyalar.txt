@@ -1,0 +1,13 @@
+Python: Hata yönetimi ve dosyalar
+
+try içine hata oluşturabilecek işlem yazılır. except ValueError gibi belirli bir except bloğu o hatayı yakalar.
+raise ValueError("Geçersiz değer") bir istisna yükseltir. return ValueError ise istisna yükseltmez;
+ValueError sınıfını sıradan dönüş değeri olarak verir. Hata bildirmek için raise kullanılır.
+except Exception bütün programlama hatalarını gizleyecek şekilde gelişigüzel kullanılmamalıdır.
+finally hata oluşsa da oluşmasa da temizlik yapmak için kullanılır.
+
+with open("notlar.txt", "r", encoding="utf-8") as dosya: dosyayı okumak için açar ve blok sonunda kapatır.
+read() dosya içeriğini metin olarak döndürür. "w" yazma modu mevcut içeriği siler; "a" sonuna ekler.
+Olmayan dosyayı okuma modunda açmak FileNotFoundError oluşturur.
+Türkçe karakterleri doğru saklamak ve okumak için aynı metin kodlamasını, örneğin UTF-8'i kullanmak gerekir.
+Kullanıcıdan alınan metni kod olarak çalıştırmak için eval kullanmak güvenli bir giriş doğrulama yöntemi değildir.

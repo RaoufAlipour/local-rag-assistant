@@ -1,0 +1,42 @@
+{
+  "question": "break ile continue farkı nedir?",
+  "status": "invalid_citations",
+  "answer": "Model geçerli kaynaklı bir cevap üretemedi. Aşağıdaki ilgili parçaları inceleyin.",
+  "model_output": "continue mevcut turun kalanını atlar ve sonraki tura geçer;\"break\" mevcut turun kalanını atlar ve sonraki tura geçer.\"",
+  "citations": [],
+  "retrieved": [
+    {
+      "id": "S1",
+      "chunk": {
+        "source": "03-donguler.txt",
+        "page": 1,
+        "position": 0,
+        "content": "Python: for ve while döngüleri for bir iterable içindeki öğeleri sırayla dolaşır. Örneğin for sayi in range(3): döngüsünde sayi sırasıyla 0, 1 ve 2 olur. range(5) 0, 1, 2, 3, 4 değerlerini üretir; bitiş değeri dahil değildir. range(2, 7, 2) 2, 4, 6 değerlerini üretir. Üçüncü argüman adım büyüklüğüdür. while koşul doğru olduğu sürece tekrar eder. Tekrar sayısı başlangıçta bilinmiyorsa kullanılabilir. while True bilinçli olarak sürekli döngü kurar. break en içteki döngüyü bitirir. continue mevcut turun kalanını atlar ve sonraki tura geçer; bütün döngüyü bitirmez. Kullanıcıdan geçerli değer gelene kadar input almak için while True, try/except ve başarılı girişte break kullanılabilir. while koşulunu etkileyen değerin güncellenmemesi istemeden sonsuz döngüye neden olabilir."
+      },
+      "score": 0.5332975912699081
+    },
+    {
+      "id": "S2",
+      "chunk": {
+        "source": "02-kosullar.txt",
+        "page": 1,
+        "position": 0,
+        "content": "Python: Koşullar ve karşılaştırmalar if bir koşul doğruysa ilgili kod bloğunu çalıştırır. elif başka bir koşulu sınar. else önceki koşulların hiçbiri doğru değilse çalışır. Python blokları girintiyle tanımlar. PEP 8 stilinde bir girinti seviyesi dört boşluk kullanır. Aynı bloktaki satırlar aynı girintide olmalıdır. = atama yapar; == iki değerin eşitliğini karşılaştırır. != eşit değil anlamına gelir. Diğer karşılaştırmalar <, >, <= ve >= operatörleridir. and iki koşulun birlikte doğru olmasını; or en az birinin doğru olmasını sınamak için kullanılır. not mantıksal değeri tersine çevirir. Koşullarda boş liste, boş metin, 0 ve None yanlış kabul edilir. Örnek: 1 <= gun <= 31, gün değerinin 1 ile 31 arasında olduğunu kontrol eder. Bu kontrol tek başına takvim tarihinin geçerli olduğunu göstermez; ayın gerçek gün sayısı ayrıca kontrol edilmelidir."
+      },
+      "score": 0.4659672729093717
+    },
+    {
+      "id": "S3",
+      "chunk": {
+        "source": "04-fonksiyonlar.txt",
+        "page": 1,
+        "position": 0,
+        "content": "Python: Fonksiyonlar, return ve kapsam Fonksiyon def anahtar sözcüğüyle tanımlanır. Parametreler tanımda, argümanlar çağrıda yer alır. Örnek: def topla(a, b): return a + b. topla(2, 3) çağrısının sonucu 5 olur. return fonksiyonu sonlandırır ve çağıran koda bir değer verir. Açık bir return yoksa fonksiyon None döndürür. print yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez. print fonksiyonunun dönüş değeri None'dır. return fonksiyon gövdesi dışında kullanılırsa SyntaxError oluşur. Fonksiyonun tanımı, fonksiyonu çağıran satır gerçekten çalıştırılmadan önce yürütülmüş olmalıdır. Bir fonksiyon başka bir fonksiyona tanımında atıf yapabilir; çağrı gerçekleştiğinde gereken isim tanımlı olmalıdır. Fonksiyon içinde atanan değişkenler, aksi belirtilmedikçe yereldir. Fonksiyon dışından doğrudan kullanılamazlar. Sonuçları fonksiyon dışında kullanmak için return ile döndürmek tercih edilir. if __name__ == \"__main__\": bloğu dosya doğrudan çalıştırıldığında yürütülür; import edildiğinde yürütülmez."
+      },
+      "score": 0.4458072753092116
+    }
+  ],
+  "retrieval_seconds": 0.9476,
+  "generation_seconds": 7.1971,
+  "total_seconds": 8.1447
+}

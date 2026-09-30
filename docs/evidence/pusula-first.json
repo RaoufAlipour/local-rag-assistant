@@ -1,0 +1,582 @@
+[
+  {
+    "question": "Pusula atölyesi hangi günlerde, saat kaçta başlar?",
+    "status": "answered",
+    "answer": "Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. [S1]\nHer oturum 75 dakika sürer. [S1]",
+    "answer_mode": "extractive",
+    "evidence": [
+      {
+        "id": "S1.8",
+        "source_id": 1,
+        "text": "Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar."
+      },
+      {
+        "id": "S1.9",
+        "source_id": 1,
+        "text": "Her oturum 75 dakika sürer."
+      }
+    ],
+    "evidence_scope": null,
+    "evidence_validation": "exact_source",
+    "model_output": "{\"selections\": [\"S1.8\", \"S1.9\"]}",
+    "generation_details": {
+      "model_lookup_and_load_seconds": 11.599156,
+      "model_details": {
+        "catalog_lookup_seconds": 0.00065,
+        "cached_state_seconds": 7e-06,
+        "loaded_state_seconds": 8e-06,
+        "model_load_seconds": 11.598085,
+        "model_log_seconds": 0.000351
+      },
+      "session_open_seconds": 0.047149,
+      "request_open_seconds": 3.9e-05,
+      "request_setup_seconds": 0.000272,
+      "response_open_seconds": 35.272264,
+      "response_read_seconds": 0.000106,
+      "response_close_seconds": 6e-06,
+      "request_close_seconds": 9e-06,
+      "session_close_seconds": 0.00034,
+      "total_seconds": 46.91942
+    },
+    "citations": [
+      1
+    ],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 1,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Katılım ve çalışma düzeni Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Atölyenin kapsamı Pusula Python Atölyesi, yerel belge asistanının denenmesi için tasarlanmış kurgusal bir eğitim programıdır. Bu belgede geçen saatler, dosya adları, süreler ve teslim kuralları yalnızca bu denemenin verileridir. Gerçek bir üniversite duyurusu veya kayıt çağrısı değildir. Atölyede başlangıç düzeyindeki Python bilgisi kullanılarak küçük bir metin analiz aracı hazırlanır. Katılımcılar sorularını kendi belgeleri üzerinden yanıtlayan bir yardımcı uygulamanın kaynak gösterimini de inceler. Uygulamanın verdiği yanıtlar, metinde yer alan bilgilerle karşılaştırılır. Belgenin amacı, modelin genel bilgisini değil yüklenen metne dayanarak yanıt verme davranışını sınamaktır. Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. Her oturum 75 dakika sürer. Bir proje ekibinde en fazla üç kişi bulunabilir. Katılımcılar bireysel çalışmayı da seçebilir. Bir ekip ortak bir proje klasörü kullanır; her üye kendi yaptığı değişiklikleri kısa bir çalışma notuna yazar. Çalışma notunda değişen dosya, değişikliğin amacı ve yapılan kontrol belirtilir. Oturum sırasında bir sorunun cevabı belgede bulunamazsa varsayım yapılmaz; soru ayrıca not edilir. Eğitim örneklerinde kullanılan kişi isimleri gerçek"
+        },
+        "score": 0.6197625041562123,
+        "lexical_score": 6.642802312419597,
+        "fusion_score": 0.03278688524590164,
+        "matched_terms": [
+          "atölyesi",
+          "başlar",
+          "pusula",
+          "saat"
+        ]
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Teslim ve değerlendirme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Teslim paketinin içeriği Pusula atölyesinde teslim paketi üç bölüm içerir: Python kaynak kodu, kurulum açıklaması ve deneme sonuçları. Kurulum açıklaması, başka bir kişinin projeyi hangi sırayla açacağını anlatır. Kullanılan örnek belgeler pakete eklenir; gerçek kişilere ait özel bilgiler örnek veri olarak kullanılmaz. Sonuçlar bölümünde sorulan soru, verilen cevap, gösterilen kaynak ve ölçülen süre birlikte saklanır. Bir cevabın yanında kaynak etiketi bulunması, cevabın doğru ve yeterli olduğu anlamına gelmez. Kaynak metniyle ayrıca karşılaştırma yapılır. Eksik veya ilgisiz bilgi varsa değerlendirme notunda açıkça belirtilir. Canlı gösterim Pusula canlı gösterimi en fazla dört dakika sürer. Gösterimde önce bir belge eklenir, sonra belgeden cevaplanabilen iki soru sorulur. Ardından belgede cevabı bulunmayan bir soru denenir. Kaynak dosyasının adı ve ilgili sayfası gösterilir. İlk sorunun süresiyle sonraki soruların süresi ayrı kaydedilir. Uygulama aynı oturumda açık tutulur; her soru öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son"
+        },
+        "score": 0.5591526023755191,
+        "lexical_score": 2.432566662738373,
+        "fusion_score": 0.03200204813108039,
+        "matched_terms": [
+          "atölyesi",
+          "pusula"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Belgeler ve yedekleme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Belge kabul kuralları Pusula atölye arşivine TXT, Markdown ve metin seçilebilen PDF dosyaları eklenebilir. Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. Bu, kurgusal atölyenin belge kuralıdır; asistan uygulamasının teknik yükleme sınırını tanımlamaz. Yalnız görüntü içeren taranmış PDF dosyaları arşive kabul edilmez. Taranmış bir dosyadan önce metin çıkarılması ve metnin okunabilirliğinin kontrol edilmesi gerekir. Dosyada okunamayan Türkçe karakterler varsa kayıt işlemi tamamlanmış sayılmaz. Belgenin açılması tek başına metnin doğru işlendiğini göstermez; içerikten kısa bir bölüm ayrıca kontrol edilir. Yedek sıklığı ve konumu Pusula proje klasörünün yedeği her çalışma gününün sonunda alınır. Pusula yedekleri 14 gün saklanır. Yeni bir yedek oluşturulması önceki günün yedeğini değiştirmez. Yedek dosyasının adına oluşturulduğu gün eklenir. Yedeğin hedefi, etkin proje klasöründen ayrı olan pusula_yedek klasörüdür. Bir yedeğin kullanılabilir olduğu, örnek bir dosyanın açılıp içeriği kontrol edildikten sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula"
+        },
+        "score": 0.5470833112263964,
+        "lexical_score": 2.6686782490829053,
+        "fusion_score": 0.03200204813108039,
+        "matched_terms": [
+          "atölyesi",
+          "pusula"
+        ]
+      }
+    ],
+    "retrieval_seconds": 1.2823,
+    "generation_seconds": 46.9245,
+    "total_seconds": 48.2068
+  },
+  {
+    "question": "Pusula yedekleri kaç gün saklanır?",
+    "status": "answered",
+    "answer": "Pusula yedekleri 14 gün saklanır. [S1]",
+    "answer_mode": "extractive",
+    "evidence": [
+      {
+        "id": "S1.9",
+        "source_id": 1,
+        "text": "Pusula yedekleri 14 gün saklanır."
+      }
+    ],
+    "evidence_scope": null,
+    "evidence_validation": "exact_source",
+    "model_output": "{\"selections\": [\"S1.9\"]}",
+    "generation_details": {
+      "model_lookup_and_load_seconds": 0.000362,
+      "model_details": {
+        "catalog_lookup_seconds": 0.000327,
+        "cached_state_seconds": 8e-06,
+        "loaded_state_seconds": 9e-06,
+        "model_load_seconds": 0.0,
+        "model_log_seconds": 0.0
+      },
+      "session_open_seconds": 0.000144,
+      "request_open_seconds": 1.9e-05,
+      "request_setup_seconds": 0.000237,
+      "response_open_seconds": 31.837627,
+      "response_read_seconds": 0.000113,
+      "response_close_seconds": 5e-06,
+      "request_close_seconds": 7e-06,
+      "session_close_seconds": 0.0003,
+      "total_seconds": 31.838871
+    },
+    "citations": [
+      1
+    ],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Belgeler ve yedekleme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Belge kabul kuralları Pusula atölye arşivine TXT, Markdown ve metin seçilebilen PDF dosyaları eklenebilir. Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. Bu, kurgusal atölyenin belge kuralıdır; asistan uygulamasının teknik yükleme sınırını tanımlamaz. Yalnız görüntü içeren taranmış PDF dosyaları arşive kabul edilmez. Taranmış bir dosyadan önce metin çıkarılması ve metnin okunabilirliğinin kontrol edilmesi gerekir. Dosyada okunamayan Türkçe karakterler varsa kayıt işlemi tamamlanmış sayılmaz. Belgenin açılması tek başına metnin doğru işlendiğini göstermez; içerikten kısa bir bölüm ayrıca kontrol edilir. Yedek sıklığı ve konumu Pusula proje klasörünün yedeği her çalışma gününün sonunda alınır. Pusula yedekleri 14 gün saklanır. Yeni bir yedek oluşturulması önceki günün yedeğini değiştirmez. Yedek dosyasının adına oluşturulduğu gün eklenir. Yedeğin hedefi, etkin proje klasöründen ayrı olan pusula_yedek klasörüdür. Bir yedeğin kullanılabilir olduğu, örnek bir dosyanın açılıp içeriği kontrol edildikten sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula"
+        },
+        "score": 0.697379052006762,
+        "lexical_score": 6.937719371764677,
+        "fusion_score": 0.03278688524590164,
+        "matched_terms": [
+          "gün",
+          "pusula",
+          "saklanır",
+          "yedekleri"
+        ]
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Teslim ve değerlendirme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Teslim paketinin içeriği Pusula atölyesinde teslim paketi üç bölüm içerir: Python kaynak kodu, kurulum açıklaması ve deneme sonuçları. Kurulum açıklaması, başka bir kişinin projeyi hangi sırayla açacağını anlatır. Kullanılan örnek belgeler pakete eklenir; gerçek kişilere ait özel bilgiler örnek veri olarak kullanılmaz. Sonuçlar bölümünde sorulan soru, verilen cevap, gösterilen kaynak ve ölçülen süre birlikte saklanır. Bir cevabın yanında kaynak etiketi bulunması, cevabın doğru ve yeterli olduğu anlamına gelmez. Kaynak metniyle ayrıca karşılaştırma yapılır. Eksik veya ilgisiz bilgi varsa değerlendirme notunda açıkça belirtilir. Canlı gösterim Pusula canlı gösterimi en fazla dört dakika sürer. Gösterimde önce bir belge eklenir, sonra belgeden cevaplanabilen iki soru sorulur. Ardından belgede cevabı bulunmayan bir soru denenir. Kaynak dosyasının adı ve ilgili sayfası gösterilir. İlk sorunun süresiyle sonraki soruların süresi ayrı kaydedilir. Uygulama aynı oturumda açık tutulur; her soru öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son"
+        },
+        "score": 0.580518597681678,
+        "lexical_score": 2.731253247118701,
+        "fusion_score": 0.03225806451612903,
+        "matched_terms": [
+          "pusula",
+          "saklanır"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 1,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Katılım ve çalışma düzeni Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Atölyenin kapsamı Pusula Python Atölyesi, yerel belge asistanının denenmesi için tasarlanmış kurgusal bir eğitim programıdır. Bu belgede geçen saatler, dosya adları, süreler ve teslim kuralları yalnızca bu denemenin verileridir. Gerçek bir üniversite duyurusu veya kayıt çağrısı değildir. Atölyede başlangıç düzeyindeki Python bilgisi kullanılarak küçük bir metin analiz aracı hazırlanır. Katılımcılar sorularını kendi belgeleri üzerinden yanıtlayan bir yardımcı uygulamanın kaynak gösterimini de inceler. Uygulamanın verdiği yanıtlar, metinde yer alan bilgilerle karşılaştırılır. Belgenin amacı, modelin genel bilgisini değil yüklenen metne dayanarak yanıt verme davranışını sınamaktır. Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. Her oturum 75 dakika sürer. Bir proje ekibinde en fazla üç kişi bulunabilir. Katılımcılar bireysel çalışmayı da seçebilir. Bir ekip ortak bir proje klasörü kullanır; her üye kendi yaptığı değişiklikleri kısa bir çalışma notuna yazar. Çalışma notunda değişen dosya, değişikliğin amacı ve yapılan kontrol belirtilir. Oturum sırasında bir sorunun cevabı belgede bulunamazsa varsayım yapılmaz; soru ayrıca not edilir. Eğitim örneklerinde kullanılan kişi isimleri gerçek"
+        },
+        "score": 0.5753337735641071,
+        "lexical_score": 1.2759768564560536,
+        "fusion_score": 0.03125763125763126,
+        "matched_terms": [
+          "pusula"
+        ]
+      }
+    ],
+    "retrieval_seconds": 1.2348,
+    "generation_seconds": 31.8394,
+    "total_seconds": 33.0741
+  },
+  {
+    "question": "Pusula arşivinde aynı adlı ikinci belge eklenirse ne olur?",
+    "status": "answered",
+    "answer": "İsim çakışmaları Pusula arşivinde aynı adlı ikinci belge ilk belgenin üzerine yazılmaz. [S2]\nYeni belgeye farklı bir ad verilmesi istenir. [S2]",
+    "answer_mode": "extractive",
+    "evidence": [
+      {
+        "id": "S2.5",
+        "source_id": 2,
+        "text": "İsim çakışmaları Pusula arşivinde aynı adlı ikinci belge ilk belgenin üzerine yazılmaz."
+      },
+      {
+        "id": "S2.6",
+        "source_id": 2,
+        "text": "Yeni belgeye farklı bir ad verilmesi istenir."
+      }
+    ],
+    "evidence_scope": null,
+    "evidence_validation": "exact_source",
+    "model_output": "{\"selections\": [\"S2.5\", \"S2.6\"]}",
+    "generation_details": {
+      "model_lookup_and_load_seconds": 0.000334,
+      "model_details": {
+        "catalog_lookup_seconds": 0.000302,
+        "cached_state_seconds": 6e-06,
+        "loaded_state_seconds": 1e-05,
+        "model_load_seconds": 0.0,
+        "model_log_seconds": 0.0
+      },
+      "session_open_seconds": 0.000125,
+      "request_open_seconds": 9e-06,
+      "request_setup_seconds": 0.000193,
+      "response_open_seconds": 16.744508,
+      "response_read_seconds": 9.3e-05,
+      "response_close_seconds": 5e-06,
+      "request_close_seconds": 6e-06,
+      "session_close_seconds": 0.000295,
+      "total_seconds": 16.74561
+    },
+    "citations": [
+      2
+    ],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Belgeler ve yedekleme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Belge kabul kuralları Pusula atölye arşivine TXT, Markdown ve metin seçilebilen PDF dosyaları eklenebilir. Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. Bu, kurgusal atölyenin belge kuralıdır; asistan uygulamasının teknik yükleme sınırını tanımlamaz. Yalnız görüntü içeren taranmış PDF dosyaları arşive kabul edilmez. Taranmış bir dosyadan önce metin çıkarılması ve metnin okunabilirliğinin kontrol edilmesi gerekir. Dosyada okunamayan Türkçe karakterler varsa kayıt işlemi tamamlanmış sayılmaz. Belgenin açılması tek başına metnin doğru işlendiğini göstermez; içerikten kısa bir bölüm ayrıca kontrol edilir. Yedek sıklığı ve konumu Pusula proje klasörünün yedeği her çalışma gününün sonunda alınır. Pusula yedekleri 14 gün saklanır. Yeni bir yedek oluşturulması önceki günün yedeğini değiştirmez. Yedek dosyasının adına oluşturulduğu gün eklenir. Yedeğin hedefi, etkin proje klasöründen ayrı olan pusula_yedek klasörüdür. Bir yedeğin kullanılabilir olduğu, örnek bir dosyanın açılıp içeriği kontrol edildikten sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula"
+        },
+        "score": 0.7035461656659862,
+        "lexical_score": 3.656260640865228,
+        "fusion_score": 0.03252247488101534,
+        "matched_terms": [
+          "arşivinde",
+          "belge",
+          "pusula"
+        ]
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 1,
+          "content": "sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula arşivinde aynı adlı ikinci belge ilk belgenin üzerine yazılmaz. Yeni belgeye farklı bir ad verilmesi istenir. Dosya adını değiştirmek, içeriğin farklı olduğunu kanıtlamaz; gerektiğinde metinler karşılaştırılır. Bir belgenin güncel sürümü çalışma notunda açıkça belirtilir. Eski sürümün hâlâ arama sonuçlarında görünmesi ihtimali ayrıca kontrol edilir. Arşivdeki kayıt ile diskteki dosyanın varlığı ayrı ayrı incelenir. Bir dosyayı diskten kaldırmak, başka bir uygulamanın indeksini kendiliğinden temizlediği anlamına gelmez. Bu nedenle belge yönetiminde yapılan değişiklikler görünür biçimde kaydedilir. Yalnızca belge yükleme ve kaynaklı cevap denemesi içindir. 2 / 3"
+        },
+        "score": 0.6289361104878768,
+        "lexical_score": 8.77734838339324,
+        "fusion_score": 0.03252247488101534,
+        "matched_terms": [
+          "adlı",
+          "arşivinde",
+          "aynı",
+          "belge",
+          "ikinci",
+          "pusula"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Teslim ve değerlendirme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Teslim paketinin içeriği Pusula atölyesinde teslim paketi üç bölüm içerir: Python kaynak kodu, kurulum açıklaması ve deneme sonuçları. Kurulum açıklaması, başka bir kişinin projeyi hangi sırayla açacağını anlatır. Kullanılan örnek belgeler pakete eklenir; gerçek kişilere ait özel bilgiler örnek veri olarak kullanılmaz. Sonuçlar bölümünde sorulan soru, verilen cevap, gösterilen kaynak ve ölçülen süre birlikte saklanır. Bir cevabın yanında kaynak etiketi bulunması, cevabın doğru ve yeterli olduğu anlamına gelmez. Kaynak metniyle ayrıca karşılaştırma yapılır. Eksik veya ilgisiz bilgi varsa değerlendirme notunda açıkça belirtilir. Canlı gösterim Pusula canlı gösterimi en fazla dört dakika sürer. Gösterimde önce bir belge eklenir, sonra belgeden cevaplanabilen iki soru sorulur. Ardından belgede cevabı bulunmayan bir soru denenir. Kaynak dosyasının adı ve ilgili sayfası gösterilir. İlk sorunun süresiyle sonraki soruların süresi ayrı kaydedilir. Uygulama aynı oturumda açık tutulur; her soru öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son"
+        },
+        "score": 0.5725936488291786,
+        "lexical_score": 2.9052728476759393,
+        "fusion_score": 0.03149801587301587,
+        "matched_terms": [
+          "aynı",
+          "belge",
+          "pusula"
+        ]
+      }
+    ],
+    "retrieval_seconds": 1.2048,
+    "generation_seconds": 16.746,
+    "total_seconds": 17.9508
+  },
+  {
+    "question": "Pusula teslim paketinin doğrulama kodu ve arşiv adı nedir?",
+    "status": "answered",
+    "answer": "Pusula teslim paketinin doğrulama kodu LIMA-482'dir. [S1]\nPusula teslim arşivinin adı pusula_teslim.zip olmalıdır. [S1]",
+    "answer_mode": "extractive",
+    "evidence": [
+      {
+        "id": "S1.9",
+        "source_id": 1,
+        "text": "Pusula teslim paketinin doğrulama kodu LIMA-482'dir."
+      },
+      {
+        "id": "S1.10",
+        "source_id": 1,
+        "text": "Pusula teslim arşivinin adı pusula_teslim.zip olmalıdır."
+      }
+    ],
+    "evidence_scope": null,
+    "evidence_validation": "exact_source",
+    "model_output": "{\"selections\": [\"S1.9\", \"S1.10\"]}",
+    "generation_details": {
+      "model_lookup_and_load_seconds": 0.000324,
+      "model_details": {
+        "catalog_lookup_seconds": 0.00029,
+        "cached_state_seconds": 6e-06,
+        "loaded_state_seconds": 1.3e-05,
+        "model_load_seconds": 0.0,
+        "model_log_seconds": 0.0
+      },
+      "session_open_seconds": 0.00012,
+      "request_open_seconds": 1e-05,
+      "request_setup_seconds": 0.000201,
+      "response_open_seconds": 10.544468,
+      "response_read_seconds": 0.000116,
+      "response_close_seconds": 7e-06,
+      "request_close_seconds": 8e-06,
+      "session_close_seconds": 0.000388,
+      "total_seconds": 10.545689
+    },
+    "citations": [
+      1
+    ],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 1,
+          "content": "öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son teslim bilgileri Pusula teslimi tamamlanmadan önce arşiv açılıp gerekli dosyaların bulunduğu kontrol edilir. Çalıştırma komutları kurulum açıklamasından kopyalanarak denenir. Belgede yer almayan bir bilgi model tarafından eklenmişse bu durum başarısız cevap olarak kaydedilir. Deneme raporunda tamamlanmayan kontroller de listelenir. Bir kontrolün planlanmış olması, yapılmış olduğu anlamına gelmez. Pusula teslim paketinin doğrulama kodu LIMA-482'dir. Pusula teslim arşivinin adı pusula_teslim.zip olmalıdır. Bu iki alan paket kontrolünde kullanılır. Teslim doğrulama kodu bir parola veya gerçek hizmet erişim bilgisi değildir; bu kurgusal belgenin ayırt edici deneme verisidir. Yalnızca belge yükleme ve kaynaklı cevap denemesi içindir. 3 / 3"
+        },
+        "score": 0.7249194118952923,
+        "lexical_score": 12.875717366323265,
+        "fusion_score": 0.03278688524590164,
+        "matched_terms": [
+          "adı",
+          "arşiv",
+          "doğrulama",
+          "kodu",
+          "paketinin",
+          "pusula",
+          "teslim"
+        ]
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Teslim ve değerlendirme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Teslim paketinin içeriği Pusula atölyesinde teslim paketi üç bölüm içerir: Python kaynak kodu, kurulum açıklaması ve deneme sonuçları. Kurulum açıklaması, başka bir kişinin projeyi hangi sırayla açacağını anlatır. Kullanılan örnek belgeler pakete eklenir; gerçek kişilere ait özel bilgiler örnek veri olarak kullanılmaz. Sonuçlar bölümünde sorulan soru, verilen cevap, gösterilen kaynak ve ölçülen süre birlikte saklanır. Bir cevabın yanında kaynak etiketi bulunması, cevabın doğru ve yeterli olduğu anlamına gelmez. Kaynak metniyle ayrıca karşılaştırma yapılır. Eksik veya ilgisiz bilgi varsa değerlendirme notunda açıkça belirtilir. Canlı gösterim Pusula canlı gösterimi en fazla dört dakika sürer. Gösterimde önce bir belge eklenir, sonra belgeden cevaplanabilen iki soru sorulur. Ardından belgede cevabı bulunmayan bir soru denenir. Kaynak dosyasının adı ve ilgili sayfası gösterilir. İlk sorunun süresiyle sonraki soruların süresi ayrı kaydedilir. Uygulama aynı oturumda açık tutulur; her soru öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son"
+        },
+        "score": 0.6742932447970296,
+        "lexical_score": 6.771678256745123,
+        "fusion_score": 0.03225806451612903,
+        "matched_terms": [
+          "adı",
+          "kodu",
+          "paketinin",
+          "pusula",
+          "teslim"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 1,
+          "position": 1,
+          "content": "yazar. Çalışma notunda değişen dosya, değişikliğin amacı ve yapılan kontrol belirtilir. Oturum sırasında bir sorunun cevabı belgede bulunamazsa varsayım yapılmaz; soru ayrıca not edilir. Eğitim örneklerinde kullanılan kişi isimleri gerçek katılımcıları temsil etmez. Dosya düzeni Her ekibin ana klasörü pusula_proje olarak adlandırılır. Ana klasörde kaynak kodu için src, belgeler için belgeler ve elde edilen çıktılar için sonuclar adlı üç alt klasör bulunur. Yeni bir dosya eklendiğinde hangi klasöre ait olduğu kontrol edilir. Çalışma notları belgeler klasöründe tutulur. Deneme çıktıları kaynak koduyla karıştırılmaz. Başka bir ekipten alınan örneğin adı değiştirilse bile kaynağı çalışma notuna yazılır. Bu düzen, bir hatanın hangi girdiden veya kod değişikliğinden sonra ortaya çıktığını takip etmeyi kolaylaştırır. Yalnızca belge yükleme ve kaynaklı cevap denemesi içindir. 1 / 3"
+        },
+        "score": 0.4097115560430367,
+        "lexical_score": 2.535520507000301,
+        "fusion_score": 0.03125763125763126,
+        "matched_terms": [
+          "adı",
+          "kodu"
+        ]
+      }
+    ],
+    "retrieval_seconds": 1.1892,
+    "generation_seconds": 10.5462,
+    "total_seconds": 11.7354
+  },
+  {
+    "question": "Pusula atölye arşivinde tek dosyanın boyut sınırı nedir?",
+    "status": "answered",
+    "answer": "Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. [S1]",
+    "answer_mode": "extractive",
+    "evidence": [
+      {
+        "id": "S1.2",
+        "source_id": 1,
+        "text": "Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir."
+      }
+    ],
+    "evidence_scope": null,
+    "evidence_validation": "exact_source",
+    "model_output": "{\"selections\": [\"S1.2\"]}",
+    "generation_details": {
+      "model_lookup_and_load_seconds": 0.000241,
+      "model_details": {
+        "catalog_lookup_seconds": 0.000217,
+        "cached_state_seconds": 5e-06,
+        "loaded_state_seconds": 7e-06,
+        "model_load_seconds": 0.0,
+        "model_log_seconds": 0.0
+      },
+      "session_open_seconds": 9.6e-05,
+      "request_open_seconds": 8e-06,
+      "request_setup_seconds": 0.000168,
+      "response_open_seconds": 12.958245,
+      "response_read_seconds": 0.00015,
+      "response_close_seconds": 7e-06,
+      "request_close_seconds": 1e-05,
+      "session_close_seconds": 0.000416,
+      "total_seconds": 12.959388
+    },
+    "citations": [
+      1
+    ],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Belgeler ve yedekleme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Belge kabul kuralları Pusula atölye arşivine TXT, Markdown ve metin seçilebilen PDF dosyaları eklenebilir. Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. Bu, kurgusal atölyenin belge kuralıdır; asistan uygulamasının teknik yükleme sınırını tanımlamaz. Yalnız görüntü içeren taranmış PDF dosyaları arşive kabul edilmez. Taranmış bir dosyadan önce metin çıkarılması ve metnin okunabilirliğinin kontrol edilmesi gerekir. Dosyada okunamayan Türkçe karakterler varsa kayıt işlemi tamamlanmış sayılmaz. Belgenin açılması tek başına metnin doğru işlendiğini göstermez; içerikten kısa bir bölüm ayrıca kontrol edilir. Yedek sıklığı ve konumu Pusula proje klasörünün yedeği her çalışma gününün sonunda alınır. Pusula yedekleri 14 gün saklanır. Yeni bir yedek oluşturulması önceki günün yedeğini değiştirmez. Yedek dosyasının adına oluşturulduğu gün eklenir. Yedeğin hedefi, etkin proje klasöründen ayrı olan pusula_yedek klasörüdür. Bir yedeğin kullanılabilir olduğu, örnek bir dosyanın açılıp içeriği kontrol edildikten sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula"
+        },
+        "score": 0.8138292819191132,
+        "lexical_score": 12.580671632004401,
+        "fusion_score": 0.03278688524590164,
+        "matched_terms": [
+          "arşivinde",
+          "atölye",
+          "boyut",
+          "dosyanın",
+          "pusula",
+          "sınırı",
+          "tek"
+        ]
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 1,
+          "content": "sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula arşivinde aynı adlı ikinci belge ilk belgenin üzerine yazılmaz. Yeni belgeye farklı bir ad verilmesi istenir. Dosya adını değiştirmek, içeriğin farklı olduğunu kanıtlamaz; gerektiğinde metinler karşılaştırılır. Bir belgenin güncel sürümü çalışma notunda açıkça belirtilir. Eski sürümün hâlâ arama sonuçlarında görünmesi ihtimali ayrıca kontrol edilir. Arşivdeki kayıt ile diskteki dosyanın varlığı ayrı ayrı incelenir. Bir dosyayı diskten kaldırmak, başka bir uygulamanın indeksini kendiliğinden temizlediği anlamına gelmez. Bu nedenle belge yönetiminde yapılan değişiklikler görünür biçimde kaydedilir. Yalnızca belge yükleme ve kaynaklı cevap denemesi içindir. 2 / 3"
+        },
+        "score": 0.42888219760386004,
+        "lexical_score": 4.442146758889713,
+        "fusion_score": 0.0315136476426799,
+        "matched_terms": [
+          "arşivinde",
+          "dosyanın",
+          "pusula"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 1,
+          "content": "öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son teslim bilgileri Pusula teslimi tamamlanmadan önce arşiv açılıp gerekli dosyaların bulunduğu kontrol edilir. Çalıştırma komutları kurulum açıklamasından kopyalanarak denenir. Belgede yer almayan bir bilgi model tarafından eklenmişse bu durum başarısız cevap olarak kaydedilir. Deneme raporunda tamamlanmayan kontroller de listelenir. Bir kontrolün planlanmış olması, yapılmış olduğu anlamına gelmez. Pusula teslim paketinin doğrulama kodu LIMA-482'dir. Pusula teslim arşivinin adı pusula_teslim.zip olmalıdır. Bu iki alan paket kontrolünde kullanılır. Teslim doğrulama kodu bir parola veya gerçek hizmet erişim bilgisi değildir; bu kurgusal belgenin ayırt edici deneme verisidir. Yalnızca belge yükleme ve kaynaklı cevap denemesi içindir. 3 / 3"
+        },
+        "score": 0.5643010358095342,
+        "lexical_score": 1.3790408343260772,
+        "fusion_score": 0.03125,
+        "matched_terms": [
+          "pusula"
+        ]
+      }
+    ],
+    "retrieval_seconds": 1.202,
+    "generation_seconds": 12.9597,
+    "total_seconds": 14.1617
+  },
+  {
+    "question": "Pusula atölyesinin sınav tarihi nedir?",
+    "status": "answered",
+    "answer": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Katılım ve çalışma düzeni Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Atölyenin kapsamı Pusula Python Atölyesi, yerel belge asistanının denenmesi için tasarlanmış kurgusal bir eğitim programıdır. [S1]",
+    "answer_mode": "extractive",
+    "evidence": [
+      {
+        "id": "S1.1",
+        "source_id": 1,
+        "text": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Katılım ve çalışma düzeni Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Atölyenin kapsamı Pusula Python Atölyesi, yerel belge asistanının denenmesi için tasarlanmış kurgusal bir eğitim programıdır."
+      }
+    ],
+    "evidence_scope": null,
+    "evidence_validation": "exact_source",
+    "model_output": "{\"selections\": [\"S1.1\"]}",
+    "generation_details": {
+      "model_lookup_and_load_seconds": 0.000358,
+      "model_details": {
+        "catalog_lookup_seconds": 0.000333,
+        "cached_state_seconds": 6e-06,
+        "loaded_state_seconds": 7e-06,
+        "model_load_seconds": 0.0,
+        "model_log_seconds": 0.0
+      },
+      "session_open_seconds": 7.8e-05,
+      "request_open_seconds": 7e-06,
+      "request_setup_seconds": 0.000128,
+      "response_open_seconds": 19.813957,
+      "response_read_seconds": 0.000193,
+      "response_close_seconds": 9e-06,
+      "request_close_seconds": 1.5e-05,
+      "session_close_seconds": 0.000828,
+      "total_seconds": 19.815656
+    },
+    "citations": [
+      1
+    ],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 1,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Katılım ve çalışma düzeni Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Atölyenin kapsamı Pusula Python Atölyesi, yerel belge asistanının denenmesi için tasarlanmış kurgusal bir eğitim programıdır. Bu belgede geçen saatler, dosya adları, süreler ve teslim kuralları yalnızca bu denemenin verileridir. Gerçek bir üniversite duyurusu veya kayıt çağrısı değildir. Atölyede başlangıç düzeyindeki Python bilgisi kullanılarak küçük bir metin analiz aracı hazırlanır. Katılımcılar sorularını kendi belgeleri üzerinden yanıtlayan bir yardımcı uygulamanın kaynak gösterimini de inceler. Uygulamanın verdiği yanıtlar, metinde yer alan bilgilerle karşılaştırılır. Belgenin amacı, modelin genel bilgisini değil yüklenen metne dayanarak yanıt verme davranışını sınamaktır. Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. Her oturum 75 dakika sürer. Bir proje ekibinde en fazla üç kişi bulunabilir. Katılımcılar bireysel çalışmayı da seçebilir. Bir ekip ortak bir proje klasörü kullanır; her üye kendi yaptığı değişiklikleri kısa bir çalışma notuna yazar. Çalışma notunda değişen dosya, değişikliğin amacı ve yapılan kontrol belirtilir. Oturum sırasında bir sorunun cevabı belgede bulunamazsa varsayım yapılmaz; soru ayrıca not edilir. Eğitim örneklerinde kullanılan kişi isimleri gerçek"
+        },
+        "score": 0.668920239576459,
+        "lexical_score": 1.2759768564560536,
+        "fusion_score": 0.032266458495966696,
+        "matched_terms": [
+          "pusula"
+        ]
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Belgeler ve yedekleme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Belge kabul kuralları Pusula atölye arşivine TXT, Markdown ve metin seçilebilen PDF dosyaları eklenebilir. Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. Bu, kurgusal atölyenin belge kuralıdır; asistan uygulamasının teknik yükleme sınırını tanımlamaz. Yalnız görüntü içeren taranmış PDF dosyaları arşive kabul edilmez. Taranmış bir dosyadan önce metin çıkarılması ve metnin okunabilirliğinin kontrol edilmesi gerekir. Dosyada okunamayan Türkçe karakterler varsa kayıt işlemi tamamlanmış sayılmaz. Belgenin açılması tek başına metnin doğru işlendiğini göstermez; içerikten kısa bir bölüm ayrıca kontrol edilir. Yedek sıklığı ve konumu Pusula proje klasörünün yedeği her çalışma gününün sonunda alınır. Pusula yedekleri 14 gün saklanır. Yeni bir yedek oluşturulması önceki günün yedeğini değiştirmez. Yedek dosyasının adına oluşturulduğu gün eklenir. Yedeğin hedefi, etkin proje klasöründen ayrı olan pusula_yedek klasörüdür. Bir yedeğin kullanılabilir olduğu, örnek bir dosyanın açılıp içeriği kontrol edildikten sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula"
+        },
+        "score": 0.5812597282128442,
+        "lexical_score": 1.5139542267926764,
+        "fusion_score": 0.032266458495966696,
+        "matched_terms": [
+          "pusula"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Teslim ve değerlendirme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Teslim paketinin içeriği Pusula atölyesinde teslim paketi üç bölüm içerir: Python kaynak kodu, kurulum açıklaması ve deneme sonuçları. Kurulum açıklaması, başka bir kişinin projeyi hangi sırayla açacağını anlatır. Kullanılan örnek belgeler pakete eklenir; gerçek kişilere ait özel bilgiler örnek veri olarak kullanılmaz. Sonuçlar bölümünde sorulan soru, verilen cevap, gösterilen kaynak ve ölçülen süre birlikte saklanır. Bir cevabın yanında kaynak etiketi bulunması, cevabın doğru ve yeterli olduğu anlamına gelmez. Kaynak metniyle ayrıca karşılaştırma yapılır. Eksik veya ilgisiz bilgi varsa değerlendirme notunda açıkça belirtilir. Canlı gösterim Pusula canlı gösterimi en fazla dört dakika sürer. Gösterimde önce bir belge eklenir, sonra belgeden cevaplanabilen iki soru sorulur. Ardından belgede cevabı bulunmayan bir soru denenir. Kaynak dosyasının adı ve ilgili sayfası gösterilir. İlk sorunun süresiyle sonraki soruların süresi ayrı kaydedilir. Uygulama aynı oturumda açık tutulur; her soru öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son"
+        },
+        "score": 0.6509613930346105,
+        "lexical_score": 1.2677381035491537,
+        "fusion_score": 0.031754032258064516,
+        "matched_terms": [
+          "pusula"
+        ]
+      }
+    ],
+    "retrieval_seconds": 1.1976,
+    "generation_seconds": 19.816,
+    "total_seconds": 21.0137
+  }
+]

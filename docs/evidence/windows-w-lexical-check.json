@@ -1,0 +1,48 @@
+{
+  "question": "Dosyayı w modunda açınca önceki içerik ne olur?",
+  "scope": "BM25 over existing document text only; no model or query vectors executed",
+  "scores": [
+    {
+      "source": "01-degiskenler.txt",
+      "bm25": 0.0,
+      "matched_terms": []
+    },
+    {
+      "source": "02-kosullar.txt",
+      "bm25": 1.5792267984766228,
+      "matched_terms": [
+        "önceki"
+      ]
+    },
+    {
+      "source": "03-donguler.txt",
+      "bm25": 0.7053999007852177,
+      "matched_terms": [
+        "olur"
+      ]
+    },
+    {
+      "source": "04-fonksiyonlar.txt",
+      "bm25": 0.6829210894429045,
+      "matched_terms": [
+        "olur"
+      ]
+    },
+    {
+      "source": "05-listeler.txt",
+      "bm25": 0.9574141228196661,
+      "matched_terms": [
+        "olur"
+      ]
+    },
+    {
+      "source": "06-hatalar-dosyalar.txt",
+      "bm25": 5.06926573848023,
+      "matched_terms": [
+        "dosyayı",
+        "modunda",
+        "w"
+      ]
+    }
+  ]
+}

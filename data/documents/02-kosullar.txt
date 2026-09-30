@@ -1,0 +1,12 @@
+Python: Koşullar ve karşılaştırmalar
+
+if bir koşul doğruysa ilgili kod bloğunu çalıştırır. elif başka bir koşulu sınar.
+else önceki koşulların hiçbiri doğru değilse çalışır. Python blokları girintiyle tanımlar.
+PEP 8 stilinde bir girinti seviyesi dört boşluk kullanır. Aynı bloktaki satırlar aynı girintide olmalıdır.
+
+= atama yapar; == iki değerin eşitliğini karşılaştırır. != eşit değil anlamına gelir.
+Diğer karşılaştırmalar <, >, <= ve >= operatörleridir.
+and iki koşulun birlikte doğru olmasını; or en az birinin doğru olmasını sınamak için kullanılır.
+not mantıksal değeri tersine çevirir. Koşullarda boş liste, boş metin, 0 ve None yanlış kabul edilir.
+Örnek: 1 <= gun <= 31, gün değerinin 1 ile 31 arasında olduğunu kontrol eder.
+Bu kontrol tek başına takvim tarihinin geçerli olduğunu göstermez; ayın gerçek gün sayısı ayrıca kontrol edilmelidir.

@@ -1,0 +1,50 @@
+{
+  "validation_type": "saved_candidates_and_output_replay",
+  "new_model_inference": false,
+  "input_sha256": "861cb32e9162f24be34c1e967ac6b73062d6e2a56608dab05b1ea317ed0f81fc",
+  "definition_result_same_source_order": {
+    "answer": "print yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez. [S2]",
+    "status": "answered",
+    "evidence_scope": {
+      "rule": "single_identifier_definition",
+      "subject": "print",
+      "offered_ids": [
+        "S2.7",
+        "S2.8",
+        "S3.13",
+        "S3.14"
+      ],
+      "excluded_ids": [
+        "S1.13",
+        "S1.14"
+      ]
+    },
+    "model_output": "{\"selections\": [\"S1.13\", \"S1.14\", \"S2.7\"]}"
+  },
+  "reranked_saved_candidates": [
+    "01-degiskenler.txt",
+    "04-fonksiyonlar.txt",
+    "02-kosullar.txt"
+  ],
+  "offered_sentences_after_ranking": {
+    "S1.13": {
+      "source_id": 1,
+      "text": "print() ekrana yazar."
+    },
+    "S1.14": {
+      "source_id": 1,
+      "text": "f-string ile değerler metne eklenebilir: print(f\"Yaş: {yas}\")."
+    },
+    "S2.7": {
+      "source_id": 2,
+      "text": "print yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez."
+    },
+    "S2.8": {
+      "source_id": 2,
+      "text": "print fonksiyonunun dönüş değeri None'dır."
+    }
+  },
+  "previous_answerable_texts_unchanged": 17,
+  "previous_out_of_scope_abstentions": 7,
+  "limitations": "Yeni sıralama yalnız kaydedilmiş üç adayla sınandı; tam indeks sorgusu veya yeni LLM yanıtı değildir. Önceki çıktılar eski kaynak kimlikleriyle tekrar işlendi. Windows model denemesi bekliyor."
+}

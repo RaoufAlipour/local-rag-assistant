@@ -1,0 +1,25 @@
+{
+  "source": "User-provided Windows diagnostic output in this conversation",
+  "sdk": "2.0.1",
+  "provider": "CUDAExecutionProvider",
+  "registered_before": false,
+  "registration_success": true,
+  "registered_after": true,
+  "selected_models": [
+    {
+      "alias": "qwen2.5-7b",
+      "id": "qwen2.5-7b-instruct-cuda-gpu:4",
+      "provider": "CUDAExecutionProvider",
+      "file_size_mb": 4843,
+      "cached": false
+    },
+    {
+      "alias": "qwen3-embedding-0.6b",
+      "id": "qwen3-embedding-0.6b-cuda-gpu:1",
+      "provider": "CUDAExecutionProvider",
+      "file_size_mb": 478,
+      "cached": false
+    }
+  ],
+  "scope": "Provider registration and catalog selection only; no download, inference, VRAM peak or offline success demonstrated."
+}

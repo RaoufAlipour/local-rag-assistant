@@ -1,0 +1,1 @@
+OFFLINE GUARD: IPv4/IPv6 TCP/UDP socket oluşturma EPERM ile engellendi.

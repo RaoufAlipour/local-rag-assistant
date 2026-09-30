@@ -1,0 +1,11 @@
+Python: for ve while döngüleri
+
+for bir iterable içindeki öğeleri sırayla dolaşır. Örneğin for sayi in range(3): döngüsünde sayi sırasıyla 0, 1 ve 2 olur.
+range(5) 0, 1, 2, 3, 4 değerlerini üretir; bitiş değeri dahil değildir.
+range(2, 7, 2) 2, 4, 6 değerlerini üretir. Üçüncü argüman adım büyüklüğüdür.
+
+while koşul doğru olduğu sürece tekrar eder. Tekrar sayısı başlangıçta bilinmiyorsa kullanılabilir.
+while True bilinçli olarak sürekli döngü kurar. break en içteki döngüyü bitirir.
+continue mevcut turun kalanını atlar ve sonraki tura geçer; bütün döngüyü bitirmez.
+Kullanıcıdan geçerli değer gelene kadar input almak için while True, try/except ve başarılı girişte break kullanılabilir.
+while koşulunu etkileyen değerin güncellenmemesi istemeden sonsuz döngüye neden olabilir.

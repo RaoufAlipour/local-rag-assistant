@@ -1,0 +1,15 @@
+Python: Listeler, sözlükler ve metin dilimleme
+
+Liste sıralı ve değiştirilebilir bir koleksiyondur: sayilar = [10, 20, 30].
+İndeksler sıfırdan başlar. sayilar[0] 10, sayilar[-1] 30 sonucunu verir.
+append(x) listenin sonuna tek bir öğe ekler. len(liste) öğe sayısını verir.
+Mevcut olmayan bir liste indeksine erişmek IndexError oluşturur.
+
+Dilimleme dizi[start:stop:step] biçimindedir. stop konumu dahil değildir.
+"python"[::-1] sonucu "nohtyp" olur. Metinler değiştirilemez; dilimleme yeni metin üretir.
+Bir metnin palindrom olup olmadığı text == text[::-1] ile karşılaştırılabilir.
+Bu basit karşılaştırma büyük-küçük harf, boşluk ve noktalama farklılıklarını kendiliğinden temizlemez.
+
+Sözlük anahtar-değer çiftlerini saklar: ogrenci = {"isim": "Ada", "yas": 20}.
+ogrenci["isim"] değeri "Ada" olur. Eksik anahtara köşeli parantezle erişim KeyError oluşturur.
+get("anahtar", varsayilan) eksik anahtar için varsayılan değeri döndürebilir.

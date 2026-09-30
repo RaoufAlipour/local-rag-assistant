@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "run_identity": "60a1d01f81a7353e75c829fb19dff29b9b8626b73acc3ff6dc8daca9bf486dfb",
+  "started_at": "2026-09-10T18:18:40.593120+00:00",
+  "configuration": {
+    "embedding_identity": "foundry-2.0.1:qwen3-embedding-0.6b-generic-cpu:1:query-instruction-v1",
+    "chat_model": "qwen2.5-7b",
+    "chat_model_id": "qwen2.5-7b-instruct-generic-cpu:4",
+    "top_k": 3,
+    "threshold": 0.35,
+    "index_digest": "a369336d789c16bd85b466724b277c3eaddf0d3da054daa5ad581079650c67e9",
+    "code_digest": "f7c139e774cafc50cae0984a0ddde9b4b12d900080d11fcccd08b3aac28c5f34",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39"
+  },
+  "total_cases": 14,
+  "results": [
+    {
+      "question": "input() hangi veri türünü döndürür?",
+      "status": "answered",
+      "answer": "input() kullanıcıdan aldığı değeri str olarak döndürür. [S1]",
+      "model_output": "input() kullanıcıdan aldığı değeri str olarak döndürür. [S1]",
+      "citations": [
+        1
+      ],
+      "retrieved": [
+        {
+          "id": "S1",
+          "chunk": {
+            "source": "01-degiskenler.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: Değişkenler ve temel veri türleri Bu belge proje için hazırlanmış başlangıç düzeyinde örnek ders notudur. Değişken, bir nesneye verilen isimdir. atama işlemi = ile yapılır: yas = 20. Python'da int tam sayıları, float ondalıklı sayıları, str metinleri, bool ise True ve False değerlerini temsil eder. Bir nesnenin türü type(nesne) ile görülebilir. Örneğin type(42), int türünü verir. Değişken adları rakamla başlayamaz ve Python anahtar sözcükleri değişken adı olarak kullanılamaz. Python büyük ve küçük harfe duyarlıdır: isim ve Isim farklı değişkenlerdir. input() kullanıcıdan aldığı değeri str olarak döndürür. Sayısal işlem yapmak için dönüşüm gerekir. Örnek: yas = int(input(\"Yaş: \")). Kullanıcı \"abc\" yazarsa int dönüşümü ValueError oluşturur. print() ekrana yazar. f-string ile değerler metne eklenebilir: print(f\"Yaş: {yas}\"). Ondalık gösterim için f\"{3.14159:.2f}\" ifadesi \"3.14\" üretir."
+          },
+          "score": 0.6679926039390105
+        },
+        {
+          "id": "S2",
+          "chunk": {
+            "source": "03-donguler.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: for ve while döngüleri for bir iterable içindeki öğeleri sırayla dolaşır. Örneğin for sayi in range(3): döngüsünde sayi sırasıyla 0, 1 ve 2 olur. range(5) 0, 1, 2, 3, 4 değerlerini üretir; bitiş değeri dahil değildir. range(2, 7, 2) 2, 4, 6 değerlerini üretir. Üçüncü argüman adım büyüklüğüdür. while koşul doğru olduğu sürece tekrar eder. Tekrar sayısı başlangıçta bilinmiyorsa kullanılabilir. while True bilinçli olarak sürekli döngü kurar. break en içteki döngüyü bitirir. continue mevcut turun kalanını atlar ve sonraki tura geçer; bütün döngüyü bitirmez. Kullanıcıdan geçerli değer gelene kadar input almak için while True, try/except ve başarılı girişte break kullanılabilir. while koşulunu etkileyen değerin güncellenmemesi istemeden sonsuz döngüye neden olabilir."
+          },
+          "score": 0.5989859124120431
+        },
+        {
+          "id": "S3",
+          "chunk": {
+            "source": "04-fonksiyonlar.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: Fonksiyonlar, return ve kapsam Fonksiyon def anahtar sözcüğüyle tanımlanır. Parametreler tanımda, argümanlar çağrıda yer alır. Örnek: def topla(a, b): return a + b. topla(2, 3) çağrısının sonucu 5 olur. return fonksiyonu sonlandırır ve çağıran koda bir değer verir. Açık bir return yoksa fonksiyon None döndürür. print yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez. print fonksiyonunun dönüş değeri None'dır. return fonksiyon gövdesi dışında kullanılırsa SyntaxError oluşur. Fonksiyonun tanımı, fonksiyonu çağıran satır gerçekten çalıştırılmadan önce yürütülmüş olmalıdır. Bir fonksiyon başka bir fonksiyona tanımında atıf yapabilir; çağrı gerçekleştiğinde gereken isim tanımlı olmalıdır. Fonksiyon içinde atanan değişkenler, aksi belirtilmedikçe yereldir. Fonksiyon dışından doğrudan kullanılamazlar. Sonuçları fonksiyon dışında kullanmak için return ile döndürmek tercih edilir. if __name__ == \"__main__\": bloğu dosya doğrudan çalıştırıldığında yürütülür; import edildiğinde yürütülmez."
+          },
+          "score": 0.5902290617543743
+        }
+      ],
+      "retrieval_seconds": 1.3547,
+      "generation_seconds": 101.4291,
+      "total_seconds": 102.7838,
+      "expected": {
+        "question": "input() hangi veri türünü döndürür?",
+        "source": "01-degiskenler.txt",
+        "expected_answer": "str"
+      },
+      "retrieval_hit": true,
+      "human_review": "pending"
+    },
+    {
+      "question": "Atama ve eşitlik operatörlerinin farkı nedir?",
+      "status": "answered",
+      "answer": "Atama işlemi = ile yapılır ve değeri sağdaki ifadenin sonucuna eşitlerken, eşitlik operatörü == iki değerin eşitliğini karşılaştırır. [S1]",
+      "model_output": "Atama işlemi = ile yapılır ve değeri sağdaki ifadenin sonucuna eşitlerken, eşitlik operatörü == iki değerin eşitliğini karşılaştırır. [S1]",
+      "citations": [
+        1
+      ],
+      "retrieved": [
+        {
+          "id": "S1",
+          "chunk": {
+            "source": "02-kosullar.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: Koşullar ve karşılaştırmalar if bir koşul doğruysa ilgili kod bloğunu çalıştırır. elif başka bir koşulu sınar. else önceki koşulların hiçbiri doğru değilse çalışır. Python blokları girintiyle tanımlar. PEP 8 stilinde bir girinti seviyesi dört boşluk kullanır. Aynı bloktaki satırlar aynı girintide olmalıdır. = atama yapar; == iki değerin eşitliğini karşılaştırır. != eşit değil anlamına gelir. Diğer karşılaştırmalar <, >, <= ve >= operatörleridir. and iki koşulun birlikte doğru olmasını; or en az birinin doğru olmasını sınamak için kullanılır. not mantıksal değeri tersine çevirir. Koşullarda boş liste, boş metin, 0 ve None yanlış kabul edilir. Örnek: 1 <= gun <= 31, gün değerinin 1 ile 31 arasında olduğunu kontrol eder. Bu kontrol tek başına takvim tarihinin geçerli olduğunu göstermez; ayın gerçek gün sayısı ayrıca kontrol edilmelidir."
+          },
+          "score": 0.4775329922556591
+        },
+        {
+          "id": "S2",
+          "chunk": {
+            "source": "05-listeler.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: Listeler, sözlükler ve metin dilimleme Liste sıralı ve değiştirilebilir bir koleksiyondur: sayilar = [10, 20, 30]. İndeksler sıfırdan başlar. sayilar[0] 10, sayilar[-1] 30 sonucunu verir. append(x) listenin sonuna tek bir öğe ekler. len(liste) öğe sayısını verir. Mevcut olmayan bir liste indeksine erişmek IndexError oluşturur. Dilimleme dizi[start:stop:step] biçimindedir. stop konumu dahil değildir. \"python\"[::-1] sonucu \"nohtyp\" olur. Metinler değiştirilemez; dilimleme yeni metin üretir. Bir metnin palindrom olup olmadığı text == text[::-1] ile karşılaştırılabilir. Bu basit karşılaştırma büyük-küçük harf, boşluk ve noktalama farklılıklarını kendiliğinden temizlemez. Sözlük anahtar-değer çiftlerini saklar: ogrenci = {\"isim\": \"Ada\", \"yas\": 20}. ogrenci[\"isim\"] değeri \"Ada\" olur. Eksik anahtara köşeli parantezle erişim KeyError oluşturur. get(\"anahtar\", varsayilan) eksik anahtar için varsayılan değeri döndürebilir."
+          },
+          "score": 0.3706784678198341
+        },
+        {
+          "id": "S3",
+          "chunk": {
+            "source": "01-degiskenler.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: Değişkenler ve temel veri türleri Bu belge proje için hazırlanmış başlangıç düzeyinde örnek ders notudur. Değişken, bir nesneye verilen isimdir. atama işlemi = ile yapılır: yas = 20. Python'da int tam sayıları, float ondalıklı sayıları, str metinleri, bool ise True ve False değerlerini temsil eder. Bir nesnenin türü type(nesne) ile görülebilir. Örneğin type(42), int türünü verir. Değişken adları rakamla başlayamaz ve Python anahtar sözcükleri değişken adı olarak kullanılamaz. Python büyük ve küçük harfe duyarlıdır: isim ve Isim farklı değişkenlerdir. input() kullanıcıdan aldığı değeri str olarak döndürür. Sayısal işlem yapmak için dönüşüm gerekir. Örnek: yas = int(input(\"Yaş: \")). Kullanıcı \"abc\" yazarsa int dönüşümü ValueError oluşturur. print() ekrana yazar. f-string ile değerler metne eklenebilir: print(f\"Yaş: {yas}\"). Ondalık gösterim için f\"{3.14159:.2f}\" ifadesi \"3.14\" üretir."
+          },
+          "score": 0.3672566540392477
+        }
+      ],
+      "retrieval_seconds": 1.1956,
+      "generation_seconds": 84.4169,
+      "total_seconds": 85.6124,
+      "expected": {
+        "question": "Atama ve eşitlik operatörlerinin farkı nedir?",
+        "source": "02-kosullar.txt",
+        "expected_answer": "= atama, == eşitlik karşılaştırması"
+      },
+      "retrieval_hit": true,
+      "human_review": "pending"
+    },
+    {
+      "question": "range(5) hangi sayıları üretir?",
+      "status": "answered",
+      "answer": "0, 1, 2, 3, 4 [S1]",
+      "model_output": "0, 1, 2, 3, 4 [S1]",
+      "citations": [
+        1
+      ],
+      "retrieved": [
+        {
+          "id": "S1",
+          "chunk": {
+            "source": "03-donguler.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: for ve while döngüleri for bir iterable içindeki öğeleri sırayla dolaşır. Örneğin for sayi in range(3): döngüsünde sayi sırasıyla 0, 1 ve 2 olur. range(5) 0, 1, 2, 3, 4 değerlerini üretir; bitiş değeri dahil değildir. range(2, 7, 2) 2, 4, 6 değerlerini üretir. Üçüncü argüman adım büyüklüğüdür. while koşul doğru olduğu sürece tekrar eder. Tekrar sayısı başlangıçta bilinmiyorsa kullanılabilir. while True bilinçli olarak sürekli döngü kurar. break en içteki döngüyü bitirir. continue mevcut turun kalanını atlar ve sonraki tura geçer; bütün döngüyü bitirmez. Kullanıcıdan geçerli değer gelene kadar input almak için while True, try/except ve başarılı girişte break kullanılabilir. while koşulunu etkileyen değerin güncellenmemesi istemeden sonsuz döngüye neden olabilir."
+          },
+          "score": 0.5843621628709497
+        },
+        {
+          "id": "S2",
+          "chunk": {
+            "source": "05-listeler.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: Listeler, sözlükler ve metin dilimleme Liste sıralı ve değiştirilebilir bir koleksiyondur: sayilar = [10, 20, 30]. İndeksler sıfırdan başlar. sayilar[0] 10, sayilar[-1] 30 sonucunu verir. append(x) listenin sonuna tek bir öğe ekler. len(liste) öğe sayısını verir. Mevcut olmayan bir liste indeksine erişmek IndexError oluşturur. Dilimleme dizi[start:stop:step] biçimindedir. stop konumu dahil değildir. \"python\"[::-1] sonucu \"nohtyp\" olur. Metinler değiştirilemez; dilimleme yeni metin üretir. Bir metnin palindrom olup olmadığı text == text[::-1] ile karşılaştırılabilir. Bu basit karşılaştırma büyük-küçük harf, boşluk ve noktalama farklılıklarını kendiliğinden temizlemez. Sözlük anahtar-değer çiftlerini saklar: ogrenci = {\"isim\": \"Ada\", \"yas\": 20}. ogrenci[\"isim\"] değeri \"Ada\" olur. Eksik anahtara köşeli parantezle erişim KeyError oluşturur. get(\"anahtar\", varsayilan) eksik anahtar için varsayılan değeri döndürebilir."
+          },
+          "score": 0.4877616139732853
+        },
+        {
+          "id": "S3",
+          "chunk": {
+            "source": "04-fonksiyonlar.txt",
+            "page": 1,
+            "position": 0,
+            "content": "Python: Fonksiyonlar, return ve kapsam Fonksiyon def anahtar sözcüğüyle tanımlanır. Parametreler tanımda, argümanlar çağrıda yer alır. Örnek: def topla(a, b): return a + b. topla(2, 3) çağrısının sonucu 5 olur. return fonksiyonu sonlandırır ve çağıran koda bir değer verir. Açık bir return yoksa fonksiyon None döndürür. print yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez. print fonksiyonunun dönüş değeri None'dır. return fonksiyon gövdesi dışında kullanılırsa SyntaxError oluşur. Fonksiyonun tanımı, fonksiyonu çağıran satır gerçekten çalıştırılmadan önce yürütülmüş olmalıdır. Bir fonksiyon başka bir fonksiyona tanımında atıf yapabilir; çağrı gerçekleştiğinde gereken isim tanımlı olmalıdır. Fonksiyon içinde atanan değişkenler, aksi belirtilmedikçe yereldir. Fonksiyon dışından doğrudan kullanılamazlar. Sonuçları fonksiyon dışında kullanmak için return ile döndürmek tercih edilir. if __name__ == \"__main__\": bloğu dosya doğrudan çalıştırıldığında yürütülür; import edildiğinde yürütülmez."
+          },
+          "score": 0.48584988536129714
+        }
+      ],
+      "retrieval_seconds": 0.8273,
+      "generation_seconds": 64.2646,
+      "total_seconds": 65.0919,
+      "expected": {
+        "question": "range(5) hangi sayıları üretir?",
+        "source": "03-donguler.txt",
+        "expected_answer": "0, 1, 2, 3, 4"
+      },
+      "retrieval_hit": true,
+      "human_review": "pending"
+    }
+  ]
+}

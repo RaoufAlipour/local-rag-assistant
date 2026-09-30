@@ -1,0 +1,14 @@
+{
+  "source": "User statement, 2026-09-11",
+  "os": "Windows 11",
+  "ram_gb": 32,
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "vram_mib": 8188,
+  "nvidia_driver_version": "592.82",
+  "python_version": "3.13.3",
+  "candidate_chat_model": "qwen2.5-7b",
+  "validated_on_device": false,
+  "windows_build": "10.0.26200",
+  "cuda_registration_and_catalog_selection_verified": true,
+  "inference_verified": false
+}

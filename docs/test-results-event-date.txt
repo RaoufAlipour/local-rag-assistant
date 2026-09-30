@@ -1,0 +1,217 @@
+test_answer_citations_resolve_to_retrieved_source (test_core.CoreTests.test_answer_citations_resolve_to_retrieved_source) ... ok
+test_bad_vector_batch_not_stored (test_core.CoreTests.test_bad_vector_batch_not_stored) ... ok
+test_blank_and_oversized_questions (test_core.CoreTests.test_blank_and_oversized_questions) ... ok
+test_changed_file_replaces_old_chunks (test_core.CoreTests.test_changed_file_replaces_old_chunks) ... ok
+test_changed_model_rejected (test_core.CoreTests.test_changed_model_rejected) ... ok
+test_chunking_coverage_and_overlap (test_core.CoreTests.test_chunking_coverage_and_overlap) ... ok
+test_citation_does_not_turn_refusal_into_an_answer (test_core.CoreTests.test_citation_does_not_turn_refusal_into_an_answer) ... ok
+test_comma_separated_refusal_is_not_a_conflicting_answer (test_core.CoreTests.test_comma_separated_refusal_is_not_a_conflicting_answer) ... ok
+test_cosine_known_angles (test_core.CoreTests.test_cosine_known_angles) ... ok
+test_empty_database_does_not_call_model (test_core.CoreTests.test_empty_database_does_not_call_model) ... ok
+test_ingest_idempotent_and_persistent (test_core.CoreTests.test_ingest_idempotent_and_persistent) ... ok
+test_invalid_citations_not_presented_as_answer (test_core.CoreTests.test_invalid_citations_not_presented_as_answer) ... ok
+test_mixed_answer_and_refusal_is_not_accepted (test_core.CoreTests.test_mixed_answer_and_refusal_is_not_accepted) ... ok
+test_model_can_abstain_despite_retrieved_context (test_core.CoreTests.test_model_can_abstain_despite_retrieved_context) ... ok
+test_no_match_does_not_call_generator (test_core.CoreTests.test_no_match_does_not_call_generator) ... ok
+test_tensor_bytes_decoded_as_floats (test_core.CoreTests.test_tensor_bytes_decoded_as_floats) ... ok
+test_transaction_preserves_old_data_on_failure (test_core.CoreTests.test_transaction_preserves_old_data_on_failure) ... ok
+test_callable_spelling_and_whole_word_match (test_definition_scope.DefinitionTests.test_callable_spelling_and_whole_word_match) ... ok
+test_comparisons_and_long_questions_keep_context (test_definition_scope.DefinitionTests.test_comparisons_and_long_questions_keep_context) ... ok
+test_missing_identifier_skips_generation (test_definition_scope.DefinitionTests.test_missing_identifier_skips_generation) ... ok
+test_only_unrelated_selection_is_not_a_valid_answer (test_definition_scope.DefinitionTests.test_only_unrelated_selection_is_not_a_valid_answer) ... ok
+test_unrelated_selection_removed_and_raw_preserved (test_definition_scope.DefinitionTests.test_unrelated_selection_removed_and_raw_preserved) ... ok
+test_already_registered_provider_is_reused (test_device.DeviceTests.test_already_registered_provider_is_reused) ... ok
+test_cpu_mode_does_not_request_provider_downloads (test_device.DeviceTests.test_cpu_mode_does_not_request_provider_downloads) ... ok
+test_cuda_request_rejects_cpu_only_catalog (test_device.DeviceTests.test_cuda_request_rejects_cpu_only_catalog) ... ok
+test_device_preference_commits_only_after_model_preparation (test_device.DeviceTests.test_device_preference_commits_only_after_model_preparation) ... 
+Hazır: example -> example-CUDAExecutionProvider:1
+Sonraki açılışlar için cihaz kaydedildi: cuda
+ok
+test_each_new_process_manager_needs_registration (test_device.DeviceTests.test_each_new_process_manager_needs_registration) ... ok
+test_missing_cuda_does_not_download_other_providers (test_device.DeviceTests.test_missing_cuda_does_not_download_other_providers) ... ok
+test_old_cpu_mapping_does_not_override_cuda_request (test_device.DeviceTests.test_old_cpu_mapping_does_not_override_cuda_request) ... ok
+test_reported_success_without_active_cuda_is_rejected (test_device.DeviceTests.test_reported_success_without_active_cuda_is_rejected) ... ok
+test_changed_experiment_and_accidental_overwrite_are_rejected (test_evaluation.EvaluationTests.test_changed_experiment_and_accidental_overwrite_are_rejected) ... [1/2] Python?
+  answered | 1.00 saniye
+[2/2] Hava?
+  answered | 1.00 saniye
+ok
+test_failed_first_question_leaves_empty_resumable_run (test_evaluation.EvaluationTests.test_failed_first_question_leaves_empty_resumable_run) ... [1/2] Python?
+[1/2] Python?
+  answered | 1.00 saniye
+[2/2] Hava?
+  answered | 1.00 saniye
+ok
+test_finished_resume_does_not_call_model (test_evaluation.EvaluationTests.test_finished_resume_does_not_call_model) ... [1/2] Python?
+  answered | 1.00 saniye
+[2/2] Hava?
+  answered | 1.00 saniye
+ok
+test_interruption_preserves_progress_and_resume_skips_finished (test_evaluation.EvaluationTests.test_interruption_preserves_progress_and_resume_skips_finished) ... [1/2] Python?
+  answered | 1.00 saniye
+[2/2] Hava?
+[2/2] Hava?
+  answered | 1.00 saniye
+ok
+test_summary_does_not_count_cited_answer_as_abstention (test_evaluation.EvaluationTests.test_summary_does_not_count_cited_answer_as_abstention) ... [1/2] Python?
+  answered | 1.00 saniye
+[2/2] Hava?
+  answered | 1.00 saniye
+ok
+test_correct_date_survives_different_document_date (test_event_date.EventDateTests.test_correct_date_survives_different_document_date) ... ok
+test_date_before_event_with_explicit_relation (test_event_date.EventDateTests.test_date_before_event_with_explicit_relation) ... ok
+test_document_date_is_not_an_event_date (test_event_date.EventDateTests.test_document_date_is_not_an_event_date) ... ok
+test_event_without_date_cannot_borrow_header_date (test_event_date.EventDateTests.test_event_without_date_cannot_borrow_header_date) ... ok
+test_merged_pdf_heading_date_not_used_for_event_description (test_event_date.EventDateTests.test_merged_pdf_heading_date_not_used_for_event_description) ... ok
+test_other_questions_and_multiple_events_not_narrowed (test_event_date.EventDateTests.test_other_questions_and_multiple_events_not_narrowed) ... ok
+test_possessive_event_and_numeric_dates (test_event_date.EventDateTests.test_possessive_event_and_numeric_dates) ... ok
+test_unrelated_selected_id_rejected (test_event_date.EventDateTests.test_unrelated_selected_id_rejected) ... ok
+test_decimal_and_code_remain_unchanged (test_evidence.EvidenceTests.test_decimal_and_code_remain_unchanged) ... ok
+test_empty_selection_is_abstention (test_evidence.EvidenceTests.test_empty_selection_is_abstention) ... ok
+test_exact_text_and_source_order_preserved (test_evidence.EvidenceTests.test_exact_text_and_source_order_preserved) ... ok
+test_fabricated_or_malformed_selection_never_rendered (test_evidence.EvidenceTests.test_fabricated_or_malformed_selection_never_rendered) ... ok
+test_native_empty_array_abstains_without_accepting_extra_claims (test_evidence.EvidenceTests.test_native_empty_array_abstains_without_accepting_extra_claims) ... ok
+test_no_hits_skips_model (test_evidence.EvidenceTests.test_no_hits_skips_model) ... ok
+test_selection_limit_and_multiple_sources (test_evidence.EvidenceTests.test_selection_limit_and_multiple_sources) ... ok
+test_single_json_fence_accepted_extra_prose_rejected (test_evidence.EvidenceTests.test_single_json_fence_accepted_extra_prose_rejected) ... ok
+test_valid_id_is_not_a_semantic_correctness_claim (test_evidence.EvidenceTests.test_valid_id_is_not_a_semantic_correctness_claim) ... ok
+test_filters_do_not_return_cpu_record_for_cuda_query (test_local_catalog.LocalCatalogTests.test_filters_do_not_return_cpu_record_for_cuda_query) ... ok
+test_incomplete_snapshot_does_not_replace_previous_file (test_local_catalog.LocalCatalogTests.test_incomplete_snapshot_does_not_replace_previous_file) ... ok
+test_loopback_catalog_preserves_id_and_task_and_closes (test_local_catalog.LocalCatalogTests.test_loopback_catalog_preserves_id_and_task_and_closes) ... ok
+test_snapshot_command_does_not_download_or_load_weights (test_local_catalog.LocalCatalogTests.test_snapshot_command_does_not_download_or_load_weights) ... ok
+test_snapshot_rejects_missing_task_even_with_matching_digest (test_local_catalog.LocalCatalogTests.test_snapshot_rejects_missing_task_even_with_matching_digest) ... ok
+test_snapshot_rejects_wrong_device_and_altered_metadata (test_local_catalog.LocalCatalogTests.test_snapshot_rejects_wrong_device_and_altered_metadata) ... ok
+test_explicit_variant_id_works_without_mapping (test_model_lookup.ModelLookupTests.test_explicit_variant_id_works_without_mapping) ... ok
+test_incomplete_cached_metadata_is_not_passed_to_session (test_model_lookup.ModelLookupTests.test_incomplete_cached_metadata_is_not_passed_to_session) ... ok
+test_public_alias_uses_recorded_variant_offline (test_model_lookup.ModelLookupTests.test_public_alias_uses_recorded_variant_offline) ... ok
+test_unavailable_model_is_not_silently_substituted (test_model_lookup.ModelLookupTests.test_unavailable_model_is_not_silently_substituted) ... ok
+test_citation_separators_in_refusal (test_retrieval.AbstentionTests.test_citation_separators_in_refusal) ... ok
+test_refusal_parser_keeps_additional_claims_visible (test_retrieval.AbstentionTests.test_refusal_parser_keeps_additional_claims_visible) ... ok
+test_exact_code_term_rescues_source_below_cosine_threshold (test_retrieval.RetrievalTests.test_exact_code_term_rescues_source_below_cosine_threshold) ... ok
+test_hybrid_store_integration_uses_existing_vectors (test_retrieval.RetrievalTests.test_hybrid_store_integration_uses_existing_vectors) ... ok
+test_one_exact_match_boosts_eligible_document_in_long_question (test_retrieval.RetrievalTests.test_one_exact_match_boosts_eligible_document_in_long_question) ... ok
+test_one_incidental_word_in_long_query_does_not_rescue_context (test_retrieval.RetrievalTests.test_one_incidental_word_in_long_query_does_not_rescue_context) ... ok
+test_query_without_matching_terms_does_not_rescue_weak_cosine (test_retrieval.RetrievalTests.test_query_without_matching_terms_does_not_rescue_weak_cosine) ... ok
+test_rare_term_outweighs_common_term (test_retrieval.RetrievalTests.test_rare_term_outweighs_common_term) ... ok
+test_single_letter_terms_are_exact_and_case_normalized (test_retrieval.RetrievalTests.test_single_letter_terms_are_exact_and_case_normalized) ... ok
+test_assistant_message_parts_are_read (test_sdk_adapter.NativeResponseTests.test_assistant_message_parts_are_read) ... ok
+test_direct_text_response_is_read (test_sdk_adapter.NativeResponseTests.test_direct_text_response_is_read) ... ok
+test_exception_still_closes_resource_and_propagates (test_timing.TimingTests.test_exception_still_closes_resource_and_propagates) ... ok
+test_underlying_exception_suppression_is_preserved (test_timing.TimingTests.test_underlying_exception_suppression_is_preserved) ... ok
+test_backend_error_does_not_create_fake_answer (test_ui.UiTests.test_backend_error_does_not_create_fake_answer) ... 2026-09-29 12:47:52.014 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-29 12:47:52.196 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.196 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.196 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.196 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.241 DEBUG   streamlit.runtime.caching.cache_resource_api: Creating new ResourceCache (key=2464f12be42b6743baa496e3b43a5888)
+2026-09-29 12:47:52.241 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.265 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.265 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-09-29 12:47:52.267 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-09-29 12:47:52.267 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.267 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.267 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.267 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.274 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.278 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.278 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+ok
+test_chat_rerun_preserves_history_and_shows_literal_source (test_ui.UiTests.test_chat_rerun_preserves_history_and_shows_literal_source) ... 2026-09-29 12:47:52.279 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-29 12:47:52.425 DEBUG   streamlit.components.v2.manifest_scanner: Filtered 145 packages down to 1 candidates for component scanning
+2026-09-29 12:47:52.426 DEBUG   streamlit.components.v2.manifest_scanner: Scanning 1 candidate packages for component manifests using 1 worker threads
+2026-09-29 12:47:52.446 DEBUG   streamlit.components.v2.manifest_scanner: Found 0 component manifests total
+2026-09-29 12:47:52.447 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-09-29 12:47:52.447 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.447 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.447 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.447 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.453 DEBUG   streamlit.runtime.caching.cache_resource_api: Creating new ResourceCache (key=2464f12be42b6743baa496e3b43a5888)
+2026-09-29 12:47:52.453 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.455 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.455 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-09-29 12:47:52.456 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-09-29 12:47:52.456 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.456 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.456 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.456 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.465 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.467 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.467 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-09-29 12:47:52.467 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.467 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.468 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.468 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.468 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.472 DEBUG   streamlit.runtime.memory_media_file_storage: Adding media file b1499c35052f616246d2519ea91b032e
+2026-09-29 12:47:52.475 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.475 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-09-29 12:47:52.476 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-09-29 12:47:52.476 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.476 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.476 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.476 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.482 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.483 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.483 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-09-29 12:47:52.483 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.483 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.483 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.483 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.484 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.485 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.485 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+ok
+test_documents_page (test_ui.UiTests.test_documents_page) ... 2026-09-29 12:47:52.486 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-29 12:47:52.624 DEBUG   streamlit.components.v2.manifest_scanner: Filtered 145 packages down to 1 candidates for component scanning
+2026-09-29 12:47:52.624 DEBUG   streamlit.components.v2.manifest_scanner: Scanning 1 candidate packages for component manifests using 1 worker threads
+2026-09-29 12:47:52.645 DEBUG   streamlit.components.v2.manifest_scanner: Found 0 component manifests total
+2026-09-29 12:47:52.646 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-09-29 12:47:52.646 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.646 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.646 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.646 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.651 DEBUG   streamlit.runtime.caching.cache_resource_api: Creating new ResourceCache (key=2464f12be42b6743baa496e3b43a5888)
+2026-09-29 12:47:52.651 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.654 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.654 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-09-29 12:47:52.655 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-09-29 12:47:52.655 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:52.655 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:52.655 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:52.655 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:52.660 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:52.717 WARNING streamlit.deprecation_util: Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-09-29 12:47:52.925 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:52.925 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+ok
+test_missing_index_disables_question_input (test_ui.UiTests.test_missing_index_disables_question_input) ... 2026-09-29 12:47:52.929 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-29 12:47:53.089 DEBUG   streamlit.components.v2.manifest_scanner: Filtered 145 packages down to 1 candidates for component scanning
+2026-09-29 12:47:53.089 DEBUG   streamlit.components.v2.manifest_scanner: Scanning 1 candidate packages for component manifests using 1 worker threads
+2026-09-29 12:47:53.111 DEBUG   streamlit.components.v2.manifest_scanner: Found 0 component manifests total
+2026-09-29 12:47:53.111 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-09-29 12:47:53.111 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-09-29 12:47:53.111 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-09-29 12:47:53.111 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-09-29 12:47:53.111 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-09-29 12:47:53.117 DEBUG   streamlit.runtime.caching.cache_resource_api: Creating new ResourceCache (key=2464f12be42b6743baa496e3b43a5888)
+2026-09-29 12:47:53.117 DEBUG   streamlit.runtime.caching.cache_utils: Cache key: cae66941d9efbd404e4d88758ea67670
+2026-09-29 12:47:53.120 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-09-29 12:47:53.120 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+ok
+test_concurrent_calls_use_one_worker_and_retrieval_works (test_ui_service.ServiceTests.test_concurrent_calls_use_one_worker_and_retrieval_works) ... ok
+test_failed_embedding_rolls_back_new_files_and_preserves_index (test_ui_service.ServiceTests.test_failed_embedding_rolls_back_new_files_and_preserves_index) ... ok
+test_invalid_file_or_path_does_not_initialize_engine (test_ui_service.ServiceTests.test_invalid_file_or_path_does_not_initialize_engine) ... invalid pdf header: b'not a'
+EOF marker not found
+ok
+test_new_document_indexed_and_existing_upload_not_overwritten (test_ui_service.ServiceTests.test_new_document_indexed_and_existing_upload_not_overwritten) ... ok
+
+----------------------------------------------------------------------
+Ran 83 tests in 1.428s
+
+OK
+Yerel katalog kaydedildi: /tmp/tmpblrcgtii/snapshot.json
+Model ağırlıkları yeniden indirilmedi. Sonraki ağsız komuta --offline ekleyin.

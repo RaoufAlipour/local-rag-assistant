@@ -1,0 +1,14 @@
+{
+  "evidence_type": "summary_of_user_pasted_console_output",
+  "platform": "Windows CUDA",
+  "success": false,
+  "stage": "catalog metadata lookup before embedding inference",
+  "model": "qwen3-embedding-0.6b",
+  "observations": [
+    "Region detection probe failed",
+    "All seven candidate regions exhausted with transport failures",
+    "Application reported missing full catalog metadata"
+  ],
+  "model_weights_previously_verified_cached": true,
+  "new_local_catalog_path_tested_on_windows": false
+}

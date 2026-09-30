@@ -1,0 +1,167 @@
+[
+  {
+    "question": "Pusula atölyesinin sınav tarihi nedir?",
+    "status": "no_context",
+    "answer": "Bu bilgi yüklenen belgelerde bulunamadı.",
+    "answer_mode": "extractive",
+    "evidence": [],
+    "evidence_scope": {
+      "rule": "event_date",
+      "subject": "sınav",
+      "offered_ids": [],
+      "excluded_ids": []
+    },
+    "evidence_validation": null,
+    "model_output": null,
+    "generation_details": null,
+    "citations": [],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 1,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Katılım ve çalışma düzeni Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Atölyenin kapsamı Pusula Python Atölyesi, yerel belge asistanının denenmesi için tasarlanmış kurgusal bir eğitim programıdır. Bu belgede geçen saatler, dosya adları, süreler ve teslim kuralları yalnızca bu denemenin verileridir. Gerçek bir üniversite duyurusu veya kayıt çağrısı değildir. Atölyede başlangıç düzeyindeki Python bilgisi kullanılarak küçük bir metin analiz aracı hazırlanır. Katılımcılar sorularını kendi belgeleri üzerinden yanıtlayan bir yardımcı uygulamanın kaynak gösterimini de inceler. Uygulamanın verdiği yanıtlar, metinde yer alan bilgilerle karşılaştırılır. Belgenin amacı, modelin genel bilgisini değil yüklenen metne dayanarak yanıt verme davranışını sınamaktır. Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. Her oturum 75 dakika sürer. Bir proje ekibinde en fazla üç kişi bulunabilir. Katılımcılar bireysel çalışmayı da seçebilir. Bir ekip ortak bir proje klasörü kullanır; her üye kendi yaptığı değişiklikleri kısa bir çalışma notuna yazar. Çalışma notunda değişen dosya, değişikliğin amacı ve yapılan kontrol belirtilir. Oturum sırasında bir sorunun cevabı belgede bulunamazsa varsayım yapılmaz; soru ayrıca not edilir. Eğitim örneklerinde kullanılan kişi isimleri gerçek"
+        },
+        "score": 0.668920239576459,
+        "lexical_score": 1.2759768564560536,
+        "fusion_score": 0.032266458495966696,
+        "matched_terms": [
+          "pusula"
+        ]
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Belgeler ve yedekleme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Belge kabul kuralları Pusula atölye arşivine TXT, Markdown ve metin seçilebilen PDF dosyaları eklenebilir. Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. Bu, kurgusal atölyenin belge kuralıdır; asistan uygulamasının teknik yükleme sınırını tanımlamaz. Yalnız görüntü içeren taranmış PDF dosyaları arşive kabul edilmez. Taranmış bir dosyadan önce metin çıkarılması ve metnin okunabilirliğinin kontrol edilmesi gerekir. Dosyada okunamayan Türkçe karakterler varsa kayıt işlemi tamamlanmış sayılmaz. Belgenin açılması tek başına metnin doğru işlendiğini göstermez; içerikten kısa bir bölüm ayrıca kontrol edilir. Yedek sıklığı ve konumu Pusula proje klasörünün yedeği her çalışma gününün sonunda alınır. Pusula yedekleri 14 gün saklanır. Yeni bir yedek oluşturulması önceki günün yedeğini değiştirmez. Yedek dosyasının adına oluşturulduğu gün eklenir. Yedeğin hedefi, etkin proje klasöründen ayrı olan pusula_yedek klasörüdür. Bir yedeğin kullanılabilir olduğu, örnek bir dosyanın açılıp içeriği kontrol edildikten sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula"
+        },
+        "score": 0.5812597282128442,
+        "lexical_score": 1.5139542267926764,
+        "fusion_score": 0.032266458495966696,
+        "matched_terms": [
+          "pusula"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Teslim ve değerlendirme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Teslim paketinin içeriği Pusula atölyesinde teslim paketi üç bölüm içerir: Python kaynak kodu, kurulum açıklaması ve deneme sonuçları. Kurulum açıklaması, başka bir kişinin projeyi hangi sırayla açacağını anlatır. Kullanılan örnek belgeler pakete eklenir; gerçek kişilere ait özel bilgiler örnek veri olarak kullanılmaz. Sonuçlar bölümünde sorulan soru, verilen cevap, gösterilen kaynak ve ölçülen süre birlikte saklanır. Bir cevabın yanında kaynak etiketi bulunması, cevabın doğru ve yeterli olduğu anlamına gelmez. Kaynak metniyle ayrıca karşılaştırma yapılır. Eksik veya ilgisiz bilgi varsa değerlendirme notunda açıkça belirtilir. Canlı gösterim Pusula canlı gösterimi en fazla dört dakika sürer. Gösterimde önce bir belge eklenir, sonra belgeden cevaplanabilen iki soru sorulur. Ardından belgede cevabı bulunmayan bir soru denenir. Kaynak dosyasının adı ve ilgili sayfası gösterilir. İlk sorunun süresiyle sonraki soruların süresi ayrı kaydedilir. Uygulama aynı oturumda açık tutulur; her soru öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son"
+        },
+        "score": 0.6509613930346105,
+        "lexical_score": 1.2677381035491537,
+        "fusion_score": 0.031754032258064516,
+        "matched_terms": [
+          "pusula"
+        ]
+      }
+    ],
+    "retrieval_seconds": 0.4627,
+    "generation_seconds": 0.0058,
+    "total_seconds": 0.4684
+  },
+  {
+    "question": "Pusula atölyesi hangi günlerde, saat kaçta başlar?",
+    "status": "answered",
+    "answer": "Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. [S1]\nHer oturum 75 dakika sürer. [S1]",
+    "answer_mode": "extractive",
+    "evidence": [
+      {
+        "id": "S1.8",
+        "source_id": 1,
+        "text": "Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar."
+      },
+      {
+        "id": "S1.9",
+        "source_id": 1,
+        "text": "Her oturum 75 dakika sürer."
+      }
+    ],
+    "evidence_scope": null,
+    "evidence_validation": "exact_source",
+    "model_output": "{\"selections\": [\"S1.8\", \"S1.9\"]}",
+    "generation_details": {
+      "model_lookup_and_load_seconds": 12.277526,
+      "model_details": {
+        "catalog_lookup_seconds": 0.000221,
+        "cached_state_seconds": 5e-06,
+        "loaded_state_seconds": 7e-06,
+        "model_load_seconds": 12.276868,
+        "model_log_seconds": 0.000379
+      },
+      "session_open_seconds": 0.046136,
+      "request_open_seconds": 2.1e-05,
+      "request_setup_seconds": 0.000563,
+      "response_open_seconds": 35.973034,
+      "response_read_seconds": 0.000111,
+      "response_close_seconds": 6e-06,
+      "request_close_seconds": 1.5e-05,
+      "session_close_seconds": 0.000352,
+      "total_seconds": 48.297843
+    },
+    "citations": [
+      1
+    ],
+    "retrieved": [
+      {
+        "id": "S1",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 1,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Katılım ve çalışma düzeni Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Atölyenin kapsamı Pusula Python Atölyesi, yerel belge asistanının denenmesi için tasarlanmış kurgusal bir eğitim programıdır. Bu belgede geçen saatler, dosya adları, süreler ve teslim kuralları yalnızca bu denemenin verileridir. Gerçek bir üniversite duyurusu veya kayıt çağrısı değildir. Atölyede başlangıç düzeyindeki Python bilgisi kullanılarak küçük bir metin analiz aracı hazırlanır. Katılımcılar sorularını kendi belgeleri üzerinden yanıtlayan bir yardımcı uygulamanın kaynak gösterimini de inceler. Uygulamanın verdiği yanıtlar, metinde yer alan bilgilerle karşılaştırılır. Belgenin amacı, modelin genel bilgisini değil yüklenen metne dayanarak yanıt verme davranışını sınamaktır. Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. Her oturum 75 dakika sürer. Bir proje ekibinde en fazla üç kişi bulunabilir. Katılımcılar bireysel çalışmayı da seçebilir. Bir ekip ortak bir proje klasörü kullanır; her üye kendi yaptığı değişiklikleri kısa bir çalışma notuna yazar. Çalışma notunda değişen dosya, değişikliğin amacı ve yapılan kontrol belirtilir. Oturum sırasında bir sorunun cevabı belgede bulunamazsa varsayım yapılmaz; soru ayrıca not edilir. Eğitim örneklerinde kullanılan kişi isimleri gerçek"
+        },
+        "score": 0.6197625041562123,
+        "lexical_score": 6.642802312419597,
+        "fusion_score": 0.03278688524590164,
+        "matched_terms": [
+          "atölyesi",
+          "başlar",
+          "pusula",
+          "saat"
+        ]
+      },
+      {
+        "id": "S2",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 3,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Teslim ve değerlendirme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Teslim paketinin içeriği Pusula atölyesinde teslim paketi üç bölüm içerir: Python kaynak kodu, kurulum açıklaması ve deneme sonuçları. Kurulum açıklaması, başka bir kişinin projeyi hangi sırayla açacağını anlatır. Kullanılan örnek belgeler pakete eklenir; gerçek kişilere ait özel bilgiler örnek veri olarak kullanılmaz. Sonuçlar bölümünde sorulan soru, verilen cevap, gösterilen kaynak ve ölçülen süre birlikte saklanır. Bir cevabın yanında kaynak etiketi bulunması, cevabın doğru ve yeterli olduğu anlamına gelmez. Kaynak metniyle ayrıca karşılaştırma yapılır. Eksik veya ilgisiz bilgi varsa değerlendirme notunda açıkça belirtilir. Canlı gösterim Pusula canlı gösterimi en fazla dört dakika sürer. Gösterimde önce bir belge eklenir, sonra belgeden cevaplanabilen iki soru sorulur. Ardından belgede cevabı bulunmayan bir soru denenir. Kaynak dosyasının adı ve ilgili sayfası gösterilir. İlk sorunun süresiyle sonraki soruların süresi ayrı kaydedilir. Uygulama aynı oturumda açık tutulur; her soru öncesinde yeniden başlatılmaz. Cevap üretimi sırasında hata oluşursa hata gizlenmez ve hangi adımda oluştuğu açıklanır. Gösterim için hazırlanan soru listesi, sonuçların doğru olduğunu önceden garanti eden bir belge değildir. Son"
+        },
+        "score": 0.5591526023755191,
+        "lexical_score": 2.432566662738373,
+        "fusion_score": 0.03200204813108039,
+        "matched_terms": [
+          "atölyesi",
+          "pusula"
+        ]
+      },
+      {
+        "id": "S3",
+        "chunk": {
+          "source": "uploads/pusula-atolye-deneme.pdf",
+          "page": 2,
+          "position": 0,
+          "content": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Belgeler ve yedekleme Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Belge kabul kuralları Pusula atölye arşivine TXT, Markdown ve metin seçilebilen PDF dosyaları eklenebilir. Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. Bu, kurgusal atölyenin belge kuralıdır; asistan uygulamasının teknik yükleme sınırını tanımlamaz. Yalnız görüntü içeren taranmış PDF dosyaları arşive kabul edilmez. Taranmış bir dosyadan önce metin çıkarılması ve metnin okunabilirliğinin kontrol edilmesi gerekir. Dosyada okunamayan Türkçe karakterler varsa kayıt işlemi tamamlanmış sayılmaz. Belgenin açılması tek başına metnin doğru işlendiğini göstermez; içerikten kısa bir bölüm ayrıca kontrol edilir. Yedek sıklığı ve konumu Pusula proje klasörünün yedeği her çalışma gününün sonunda alınır. Pusula yedekleri 14 gün saklanır. Yeni bir yedek oluşturulması önceki günün yedeğini değiştirmez. Yedek dosyasının adına oluşturulduğu gün eklenir. Yedeğin hedefi, etkin proje klasöründen ayrı olan pusula_yedek klasörüdür. Bir yedeğin kullanılabilir olduğu, örnek bir dosyanın açılıp içeriği kontrol edildikten sonra kabul edilir. Yedek hazırlanırken hata oluşursa çalışma notuna hata açıklaması yazılır. Yedekleme tamamlanmadan kaynak dosyalar silinmez. Yedeklerden geri yükleme yapılırsa hangi yedeğin kullanıldığı da not edilir. İsim çakışmaları Pusula"
+        },
+        "score": 0.5470833112263964,
+        "lexical_score": 2.6686782490829053,
+        "fusion_score": 0.03200204813108039,
+        "matched_terms": [
+          "atölyesi",
+          "pusula"
+        ]
+      }
+    ],
+    "retrieval_seconds": 1.247,
+    "generation_seconds": 48.2984,
+    "total_seconds": 49.5454
+  }
+]

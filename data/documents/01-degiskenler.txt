@@ -1,0 +1,13 @@
+Python: Değişkenler ve temel veri türleri
+
+Bu belge proje için hazırlanmış başlangıç düzeyinde örnek ders notudur.
+Değişken, bir nesneye verilen isimdir. atama işlemi = ile yapılır: yas = 20.
+Python'da int tam sayıları, float ondalıklı sayıları, str metinleri, bool ise True ve False değerlerini temsil eder.
+Bir nesnenin türü type(nesne) ile görülebilir. Örneğin type(42), int türünü verir.
+Değişken adları rakamla başlayamaz ve Python anahtar sözcükleri değişken adı olarak kullanılamaz.
+Python büyük ve küçük harfe duyarlıdır: isim ve Isim farklı değişkenlerdir.
+
+input() kullanıcıdan aldığı değeri str olarak döndürür. Sayısal işlem yapmak için dönüşüm gerekir.
+Örnek: yas = int(input("Yaş: ")). Kullanıcı "abc" yazarsa int dönüşümü ValueError oluşturur.
+print() ekrana yazar. f-string ile değerler metne eklenebilir: print(f"Yaş: {yas}").
+Ondalık gösterim için f"{3.14159:.2f}" ifadesi "3.14" üretir.

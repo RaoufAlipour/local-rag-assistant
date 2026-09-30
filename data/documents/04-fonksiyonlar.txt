@@ -1,0 +1,13 @@
+Python: Fonksiyonlar, return ve kapsam
+
+Fonksiyon def anahtar sözcüğüyle tanımlanır. Parametreler tanımda, argümanlar çağrıda yer alır.
+Örnek: def topla(a, b): return a + b. topla(2, 3) çağrısının sonucu 5 olur.
+return fonksiyonu sonlandırır ve çağıran koda bir değer verir. Açık bir return yoksa fonksiyon None döndürür.
+print yalnızca ekrana yazar; yazdırdığı değeri çağırana sonuç olarak vermez. print fonksiyonunun dönüş değeri None'dır.
+return fonksiyon gövdesi dışında kullanılırsa SyntaxError oluşur.
+
+Fonksiyonun tanımı, fonksiyonu çağıran satır gerçekten çalıştırılmadan önce yürütülmüş olmalıdır.
+Bir fonksiyon başka bir fonksiyona tanımında atıf yapabilir; çağrı gerçekleştiğinde gereken isim tanımlı olmalıdır.
+Fonksiyon içinde atanan değişkenler, aksi belirtilmedikçe yereldir. Fonksiyon dışından doğrudan kullanılamazlar.
+Sonuçları fonksiyon dışında kullanmak için return ile döndürmek tercih edilir.
+if __name__ == "__main__": bloğu dosya doğrudan çalıştırıldığında yürütülür; import edildiğinde yürütülmez.

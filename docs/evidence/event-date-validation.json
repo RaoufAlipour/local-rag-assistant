@@ -1,0 +1,76 @@
+{
+  "validation_type": "saved_context_and_output_replay",
+  "new_model_inference": false,
+  "input_sha256": "931c78823d8a98a63b7400c2525c6c6bed731d201cdab48fd831672dd9d82543",
+  "pdf_cases": [
+    {
+      "question": "Pusula atölyesi hangi günlerde, saat kaçta başlar?",
+      "old_status": "answered",
+      "status": "answered",
+      "old_answer": "Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. [S1]\nHer oturum 75 dakika sürer. [S1]",
+      "answer": "Oturum ve ekip Pusula Python Atölyesi oturumları salı ve perşembe günleri saat 18.30'da başlar. [S1]\nHer oturum 75 dakika sürer. [S1]",
+      "answer_unchanged": true,
+      "scope": null,
+      "replay_generator_called": true
+    },
+    {
+      "question": "Pusula yedekleri kaç gün saklanır?",
+      "old_status": "answered",
+      "status": "answered",
+      "old_answer": "Pusula yedekleri 14 gün saklanır. [S1]",
+      "answer": "Pusula yedekleri 14 gün saklanır. [S1]",
+      "answer_unchanged": true,
+      "scope": null,
+      "replay_generator_called": true
+    },
+    {
+      "question": "Pusula arşivinde aynı adlı ikinci belge eklenirse ne olur?",
+      "old_status": "answered",
+      "status": "answered",
+      "old_answer": "İsim çakışmaları Pusula arşivinde aynı adlı ikinci belge ilk belgenin üzerine yazılmaz. [S2]\nYeni belgeye farklı bir ad verilmesi istenir. [S2]",
+      "answer": "İsim çakışmaları Pusula arşivinde aynı adlı ikinci belge ilk belgenin üzerine yazılmaz. [S2]\nYeni belgeye farklı bir ad verilmesi istenir. [S2]",
+      "answer_unchanged": true,
+      "scope": null,
+      "replay_generator_called": true
+    },
+    {
+      "question": "Pusula teslim paketinin doğrulama kodu ve arşiv adı nedir?",
+      "old_status": "answered",
+      "status": "answered",
+      "old_answer": "Pusula teslim paketinin doğrulama kodu LIMA-482'dir. [S1]\nPusula teslim arşivinin adı pusula_teslim.zip olmalıdır. [S1]",
+      "answer": "Pusula teslim paketinin doğrulama kodu LIMA-482'dir. [S1]\nPusula teslim arşivinin adı pusula_teslim.zip olmalıdır. [S1]",
+      "answer_unchanged": true,
+      "scope": null,
+      "replay_generator_called": true
+    },
+    {
+      "question": "Pusula atölye arşivinde tek dosyanın boyut sınırı nedir?",
+      "old_status": "answered",
+      "status": "answered",
+      "old_answer": "Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. [S1]",
+      "answer": "Pusula atölye arşivinde tek dosya için boyut sınırı 8 MB'dir. [S1]",
+      "answer_unchanged": true,
+      "scope": null,
+      "replay_generator_called": true
+    },
+    {
+      "question": "Pusula atölyesinin sınav tarihi nedir?",
+      "old_status": "answered",
+      "status": "no_context",
+      "old_answer": "PUSULA PYTHON ATÖLYESİ / DENEME BELGESİ Katılım ve çalışma düzeni Sürüm 1.0 · Kurgusal içerik · 29 Eylül 2026 Atölyenin kapsamı Pusula Python Atölyesi, yerel belge asistanının denenmesi için tasarlanmış kurgusal bir eğitim programıdır. [S1]",
+      "answer": "Bu bilgi yüklenen belgelerde bulunamadı.",
+      "answer_unchanged": false,
+      "scope": {
+        "rule": "event_date",
+        "subject": "sınav",
+        "offered_ids": [],
+        "excluded_ids": []
+      },
+      "replay_generator_called": false
+    }
+  ],
+  "previous_17_answers_unchanged": true,
+  "previous_out_of_scope_abstentions": 7,
+  "print_cases_unchanged": 2,
+  "limits": "Aynı kayıtlı kaynaklarla yeni kontrol çalıştırıldı. Yeni retrieval, LLM üretimi veya hız ölçümü değildir. Genel kapsam dışı soru başarımı ölçülmedi."
+}
