@@ -1,56 +1,58 @@
 # Notlarım — Local RAG Assistant
 
-**Belgelerine sor. Cevabı kaynağıyla birlikte gör.**
+**English** | [Türkçe](README.tr.md)
 
-Notlarım, Türkçe ders notları ve diğer metin belgeleri üzerinde çalışan yerel bir soru-cevap asistanıdır. İlgili metin parçalarını bulur, Microsoft Foundry Local üzerinde çalışan bir dil modeline iletir ve cevabın kaynaklarını gösterir.
+**Ask your documents. See the sources behind the answer.**
 
-İlk kurulum ve model indirmeleri tamamlandıktan sonra internet bağlantısı olmadan kullanılabilir. Bulut LLM API’si, API anahtarı veya Azure hesabı gerektirmez.
+Notlarım is a local question-answering assistant for Turkish course notes and other text documents. It retrieves relevant passages, passes them to a language model running through Microsoft Foundry Local, and displays the sources alongside the answer.
 
-[Kurulum](#kurulum) · [Kullanım](#kullanım) · [Nasıl çalışır?](#nasıl-çalışır) · [Testler](#testler) · [Dokümantasyon](#dokümantasyon)
+Once dependencies and models are downloaded and setup is complete, the application can run without an internet connection. No cloud LLM API, API key, or Azure account is required.
 
-## Neden Notlarım?
+[Setup](#setup) · [Usage](#usage) · [How it works](#how-it-works) · [Tests](#tests) · [Documentation](#documentation)
 
-Ders notlarında bir kavramı ararken yalnızca bir cevap almak değil, cevabın hangi belgeye dayandığını görmek de önemlidir. Notlarım, küçük bir belge koleksiyonunu aranabilir bir bilgi kaynağına dönüştürür ve kaynak metnini cevabın yanında incelemeyi sağlar.
+## Why Notlarım?
 
-Depo, başlangıç için **altı Türkçe Python notu** içerir. Kendi TXT, Markdown veya metin içeren PDF belgelerini de ekleyebilirsin.
+When looking up a concept in your notes, seeing where an answer comes from matters as much as the answer itself. Notlarım turns a small document collection into a searchable knowledge source and lets you inspect the original passages next to each response.
 
-## Özellikler
+The repository includes **six Turkish Python study notes** to get started. You can also add your own TXT, Markdown, or text-based PDF documents. The sample content and interface are in Turkish.
 
-- **Yerel çalışma:** Embedding ve cevap üretimi Foundry Local ile cihaz üzerinde gerçekleşir.
-- **Belge desteği:** TXT, Markdown ve metin içeren PDF dosyalarını okur; PDF sayfa bilgisini korur.
-- **Hibrit arama:** Vektör benzerliğini sözcük tabanlı aramayla birleştirir.
-- **Kaynaklı cevaplar:** Belge adını, sayfayı ve getirilen kaynak metnini gösterir.
-- **İki cevap biçimi:** Özgün kaynak cümleleri veya modelin oluşturduğu açıklama.
-- **Minimal arayüz:** Koyu temalı sohbet, belge yükleme ve JSON sohbet indirme.
-- **Oturum önbelleği:** Aynı soru ve cevap modu için, belge indeksi değişmediyse önceki cevabı kullanır.
-- **Terminal desteği:** İndeksleme, arama, sohbet ve değerlendirme komutları sunar.
+## Features
 
-## Teknolojiler
+- **Local inference:** Embeddings and answers are generated on your device using Foundry Local.
+- **Document support:** Reads TXT, Markdown, and text-based PDFs, preserving PDF page references.
+- **Hybrid retrieval:** Combines vector similarity with lexical search.
+- **Source references:** Shows document names, pages, and retrieved passages.
+- **Two answer modes:** Original source sentences or model-generated explanations.
+- **Minimal interface:** Dark chat interface, document uploads, and JSON chat export.
+- **Session cache:** Reuses answers for the same question and answer mode when the document index has not changed.
+- **Command-line tools:** Supports indexing, search, chat, and evaluation.
 
-| Bileşen | Kullanılan teknoloji |
+## Technology
+
+| Component | Technology |
 |---|---|
-| Uygulama | Python |
-| Model çalıştırma | Microsoft Foundry Local SDK 2.0.1 |
-| Sohbet modeli | Qwen2.5-7B |
-| Embedding modeli | Qwen3-Embedding-0.6B · 1024 boyut |
-| Veri deposu | SQLite |
-| Arama | Cosine similarity + BM25 + Reciprocal Rank Fusion |
-| Arayüz | Streamlit |
-| PDF okuma | pypdf |
+| Application | Python |
+| Model runtime | Microsoft Foundry Local SDK 2.0.1 |
+| Chat model | Qwen2.5-7B |
+| Embedding model | Qwen3-Embedding-0.6B · 1024 dimensions |
+| Storage | SQLite |
+| Retrieval | Cosine similarity + BM25 + Reciprocal Rank Fusion |
+| Interface | Streamlit |
+| PDF parsing | pypdf |
 
-## Kurulum
+## Setup
 
-### Gereksinimler
+### Prerequisites
 
-Aşağıdaki adımlar **Windows ve NVIDIA CUDA** kurulumu içindir.
+These instructions cover **Windows with NVIDIA CUDA**.
 
-Doğrulanan cihaz: Windows 11, Python **3.13.3**, **32 GB RAM** ve **RTX 4070 Laptop GPU / 8 GB VRAM**. Bu bilgiler test ortamını belirtir; minimum sistem gereksinimi değildir. macOS üzerinde doğrulama yapılmadı.
+Validated environment: Windows 11, Python **3.13.3**, **32 GB RAM**, and an **RTX 4070 Laptop GPU with 8 GB VRAM**. These describe the test machine, not minimum system requirements. macOS has not been validated.
 
-Git ve Python kurulu olmalı. Bağımlılık ve model indirmeleri için ilk kurulumda internet gerekir. Model ağırlıkları, sanal ortam ve yerel veritabanı bu depoya dahil değildir.
+Install Git and Python first. Initial dependency and model downloads require internet access. Model weights, the virtual environment, and the local database are not included in this repository.
 
-### 1. Projeyi indir ve bağımlılıkları kur
+### 1. Clone the repository and install dependencies
 
-PowerShell’de:
+In PowerShell:
 
 ```powershell
 git clone https://github.com/RaoufAlipour/local-rag-assistant.git
@@ -60,143 +62,145 @@ py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe main.py doctor
 ```
 
-Sanal ortamı etkinleştirmek gerekmez; komutlar doğrudan bu ortamın Python’unu kullanır.
+You do not need to activate the virtual environment: these commands use its Python executable directly.
 
-### 2. Modelleri ve çevrimdışı kataloğu hazırla
+### 2. Prepare the models and offline catalog
 
-Bu adımı **internet açıkken** çalıştır:
+Run this step **with internet access**:
 
 ```powershell
 .\.venv\Scripts\python.exe main.py prepare --chat-model qwen2.5-7b --device cuda
 .\.venv\Scripts\python.exe main.py snapshot --chat-model qwen2.5-7b --device cuda
 ```
 
-`prepare`, modelleri hazırlar ve cihaz seçimini kaydeder. `snapshot`, sonraki çevrimdışı açılışlarda gereken model bilgilerini saklar.
+`prepare` prepares the models and saves the device selection. `snapshot` saves the model metadata required for subsequent offline launches.
 
-### 3. Örnek belgeleri indeksle
+### 3. Index the sample documents
 
 ```powershell
 .\.venv\Scripts\python.exe main.py ingest --offline
 ```
 
-`data/documents/` içindeki belgeler işlenir ve yerel SQLite indeksi oluşturulur.
+This processes documents in `data/documents/` and creates the local SQLite index.
 
-### 4. Uygulamayı aç
+### 4. Launch the application
 
 ```powershell
 .\.venv\Scripts\python.exe ui.py
 ```
 
-Tarayıcıda **http://127.0.0.1:8501** adresini aç. Arayüz yerel kataloğu kullanır; hazırlık tamamlandıysa Wi-Fi kapalıyken de çalışabilir.
+Open **http://127.0.0.1:8501** in your browser. The interface uses the local catalog and can run with Wi-Fi disabled once preparation is complete.
 
-> Sonraki kullanımlarda yalnızca `ui.py` komutunu çalıştırman yeterli. Her açılışta model indirme veya yeniden indeksleme gerekmez. İlk soru, model yüklenirken daha uzun sürebilir.
+> For later sessions, just run `ui.py`. You do not need to download models or rebuild the index on every launch. The first question may take longer while the model loads.
 
-## Kullanım
+## Usage
 
-### Belgelerine soru sor
+### Ask about your documents
 
-Örnek Python notlarıyla şunları deneyebilirsin:
+Try these questions with the included Turkish Python notes:
 
-- `break ile continue arasındaki fark nedir?`
-- `print fonksiyonunun dönüş değeri nedir?`
-- `Dosyayı a ve w modunda açmanın farkı nedir?`
+- `break ile continue arasındaki fark nedir?` — What is the difference between break and continue?
+- `print fonksiyonunun dönüş değeri nedir?` — What does the print function return?
+- `Dosyayı a ve w modunda açmanın farkı nedir?` — What is the difference between opening a file in a and w modes?
 
-Cevabın altındaki **Kaynaklar** bölümünü açarak belgeyi ve kullanılan metin parçasını incele. Her soru bağımsız işlenir; önceki mesajlara gönderme yapmak yerine soruyu açıkça yaz.
+Expand **Kaynaklar** (Sources) below the answer to inspect the document and retrieved passage. Each question is processed independently, so write a complete question instead of referring to earlier messages.
 
-### Kendi belgelerini ekle
+### Add your own documents
 
-Sol menüdeki **Belgeler** ekranını kullan. Dosya başına sınır **20 MB**’dır. Yeni belgeler işlenirken embedding’leri oluşturulur; değişmeyen belgeler yeniden işlenmez.
+Use **Belgeler** (Documents) in the sidebar. The upload limit is **20 MB per file**. New documents are embedded during processing; unchanged documents are not reprocessed.
 
-### Cevap biçimini seç
+### Choose an answer mode
 
-| Mod | Davranış |
+| Mode | Behavior |
 |---|---|
-| **Kaynak cümleleri** — arayüz varsayılanı | Modelin seçtiği özgün belge cümlelerini gösterir. |
-| **Model açıklaması** | Getirilen bağlamdan kısa, kaynak etiketli bir açıklama üretir. |
+| **Kaynak cümleleri** (Source sentences) — interface default | Displays original document sentences selected by the model. |
+| **Model açıklaması** (Model explanation) | Generates a short explanation with source labels from the retrieved context. |
 
-Kaynak göstermek, cevabın ilgili veya yeterli olduğunu tek başına kanıtlamaz. Özellikle önemli ayrıntılarda kaynak metnini kontrol et.
+A citation alone does not prove that an answer is relevant or complete. Check the source passage when details matter.
 
-### Terminalden kullan
+### Use the command line
 
 ```powershell
 .\.venv\Scripts\python.exe main.py ask "break ile continue farkı nedir?" --chat-model qwen2.5-7b --answer-mode extractive --offline
 .\.venv\Scripts\python.exe main.py --help
 ```
 
-## Nasıl çalışır?
+## How it works
 
-Belge hazırlama sırasında metinler yaklaşık **180 kelimelik**, **30 kelime örtüşmeli** parçalara ayrılır. Metinler, kaynak bilgileri ve embedding’ler SQLite’a kaydedilir.
+During ingestion, documents are split into chunks of approximately **180 words**, with a **30-word overlap**. Text, source metadata, and embeddings are stored in SQLite.
 
-Soru geldiğinde aynı embedding modeliyle sorgu vektörü üretilir. Python katmanı vektör benzerliğini ve sözcük eşleşmelerini birleştirerek en fazla üç ilgili parçayı seçer. Yerel sohbet modeli bu bağlamı kullanır; uygulama kaynak kimliklerini doğrulayıp sonucu gösterir.
+For each question, the same embedding model generates a query vector. The Python retrieval layer combines vector similarity and lexical matches to select up to three relevant chunks. The local chat model uses this context, and the application checks source identifiers before displaying the result.
 
 ```mermaid
 flowchart TD
-    D["Belgeler"] --> I["Parçalama ve embedding"]
-    I --> DB["SQLite: metin, kaynak ve vektörler"]
-    Q["Kullanıcı sorusu"] --> R["Sorgu embedding'i ve hibrit arama"]
+    D["Documents"] --> I["Chunking and embeddings"]
+    I --> DB["SQLite: text, sources, and vectors"]
+    Q["User question"] --> R["Query embedding and hybrid retrieval"]
     DB --> R
-    R --> L["Foundry Local: soru ve bulunan bağlam"]
-    L --> A["Kaynak kontrolü ve cevap"]
+    R --> L["Foundry Local: question and retrieved context"]
+    L --> A["Source validation and answer"]
 ```
 
-## Testler
+## Tests
 
-Model indirmeden altyapı testlerini çalıştır:
+Run the infrastructure tests without downloading models:
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-Testler; belge işleme, indeks güncelleme, arama, kaynak denetimi, önbellek ve arayüz akışlarını kapsar. Otomatik testlerin geçmesi, dil modelinin bütün sorulara doğru cevap verdiği anlamına gelmez.
+Tests cover document processing, index updates, retrieval, source validation, caching, and interface flows. Passing automated tests does not mean the language model answers every question correctly.
 
-Mevcut modellerle gerçek cevapları değerlendirmek için:
+To evaluate real answers using prepared models:
 
 ```powershell
 .\.venv\Scripts\python.exe main.py evaluate --chat-model qwen2.5-7b --answer-mode extractive --offline --output storage/evaluation-results.json
 ```
 
-Ham deney kayıtları ve incelemeler [docs/evidence/](docs/evidence/) altında bulunur. Bunlar farklı sürüm ve koşumlara aittir; tek bir güncel doğruluk oranı olarak birleştirilmemelidir.
+Raw experiment records and reviews are available under [docs/evidence/](docs/evidence/). They cover different versions and runs and should not be combined into a single current accuracy score.
 
-## Bilinen sınırlar
+## Known limitations
 
-- **Yanıt süresi değişkendir.** İlk yükleme ve yeni sorular uzun sürebilir; her soruda 1–3 saniye hedefi sağlanmıyor. Önbellek yalnız tekrar soruları hızlandırır.
-- **OCR yoktur.** Taranmış PDF’ler önce metne dönüştürülmelidir.
-- **Sohbet belleği yoktur.** Geçmiş ekranda görünür, ancak sonraki sorunun bağlamına eklenmez.
-- **Kalite kusursuz değildir.** Kaynak seçimi eksik veya ilgisiz olabilir; kapsam filtreleri bazen doğru soruları reddedebilir.
-- **Dosya silmek indeksi temizlemez.** Klasörden kaldırılan bir belgenin kayıtları otomatik silinmez.
-- **Çevrimdışı mod bir güvenlik duvarı değildir.** Yerel kataloğu kullanır; işletim sistemi düzeyinde ağ engellemesi yapmaz.
+- **Response times vary.** Initial loading and new questions can take time; the application does not consistently meet a 1–3 second response target. Caching only accelerates repeated questions.
+- **No OCR.** Scanned PDFs must first be converted to text.
+- **No conversational memory.** Chat history is displayed but is not included in the context of subsequent questions.
+- **Answers can be imperfect.** Selected sources may be incomplete or irrelevant, and scope filters can reject valid questions.
+- **Deleting a file does not clean the index.** Records for documents removed from the folder are not automatically deleted.
+- **Offline mode is not a firewall.** It uses a local catalog but does not block network access at the operating-system level.
 
-## Proje yapısı
+## Project structure
 
-| Yol | İçerik |
+| Path | Contents |
 |---|---|
-| `app.py` / `ui.py` | Streamlit arayüzü ve başlatıcı |
-| `main.py` | Komut satırı giriş noktası |
-| `ragapp/` | Belge işleme, arama, model bağlantısı ve kaynak kontrolleri |
-| `data/documents/` | Örnek Python notları |
-| `tests/` | Otomatik testler |
-| `scripts/` | Tanılama ve model karşılaştırma araçları |
-| `docs/` | Teknik açıklamalar ve deney kayıtları |
-| `teslim/` | Rapor, sunum ve demo rehberi |
-| `storage/` | Çalışırken oluşturulan yerel veriler; Git tarafından dışlanır |
+| `app.py` / `ui.py` | Streamlit interface and launcher |
+| `main.py` | Command-line entry point |
+| `ragapp/` | Document processing, retrieval, model integration, and source checks |
+| `data/documents/` | Sample Python notes |
+| `tests/` | Automated tests |
+| `scripts/` | Diagnostics and model comparison tools |
+| `docs/` | Technical notes and experiment records |
+| `teslim/` | Report, presentation, and demo guide |
+| `storage/` | Runtime-generated local data; excluded from Git |
 
-## Dokümantasyon
+## Documentation
 
-- [Mimari ve uygulama kararları](docs/ARCHITECTURE.md)
-- [Çevrimdışı katalog](docs/OFFLINE-CATALOG.md)
-- [Kaynak cümlesi yaklaşımı](docs/SOURCE-FAITHFUL-ANSWERS.md)
-- [Kalite değerlendirmesi](docs/WINDOWS-QUALITY-V3-REVIEW.md)
-- [Performans deneyleri](docs/SPEED-RESULTS.md)
-- [Proje raporu](teslim/proje-raporu.pdf) · [Sunum](teslim/proje-sunumu.pptx) · [Demo rehberi](teslim/DEMO.md)
+The supporting project documentation is primarily in Turkish.
 
-Bazı raporlar geliştirme sürecinin önceki aşamalarını belgeler; hazırlandıkları sürümün sonuçlarını yansıtır.
+- [Architecture and implementation decisions](docs/ARCHITECTURE.md)
+- [Offline catalog](docs/OFFLINE-CATALOG.md)
+- [Source sentence approach](docs/SOURCE-FAITHFUL-ANSWERS.md)
+- [Quality evaluation](docs/WINDOWS-QUALITY-V3-REVIEW.md)
+- [Performance experiments](docs/SPEED-RESULTS.md)
+- [Project report](teslim/proje-raporu.pdf) · [Presentation](teslim/proje-sunumu.pptx) · [Demo guide](teslim/DEMO.md)
 
-## Kaynaklar
+Some reports document earlier development stages and reflect the results of the version reviewed at that time.
 
-- [Microsoft Foundry Local SDK ve örnekler](https://github.com/microsoft/Foundry-Local)
-- [SQLite dokümantasyonu](https://www.sqlite.org/docs.html)
-- [Streamlit dokümantasyonu](https://docs.streamlit.io/)
+## References
+
+- [Microsoft Foundry Local SDK and examples](https://github.com/microsoft/Foundry-Local)
+- [SQLite documentation](https://www.sqlite.org/docs.html)
+- [Streamlit documentation](https://docs.streamlit.io/)
 
 ---
 
-Bu proje, yerel RAG mimarisini uygulamalı olarak öğrenmek amacıyla geliştirilmiş bir akademik prototiptir.
+This project is an academic prototype built to explore local RAG architecture through practical implementation.
